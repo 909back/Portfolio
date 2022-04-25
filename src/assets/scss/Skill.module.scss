@@ -1,0 +1,75 @@
+@mixin border {
+    border: 2px solid #333;
+}
+
+
+.skillPage {
+  width: 100%;
+  width: 100%;
+
+  h2 {
+    text-align: center;
+    line-height: 5rem;
+    font-size: 2rem;
+  }
+
+  section.skills {
+    display: grid;
+    width: 75vw;
+    height: 76vh;
+    margin: 5px auto;
+    @include border;
+    background-color: antiquewhite;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "html js react"
+      "html js  node"
+      "css  js  next "
+      "css type mysql";
+
+    div {
+        @include border;
+    }
+
+    .html {
+      grid-area: html;
+      background-color: #E34F26;
+    }
+
+    .css {
+        grid-area: css;
+        background-color:#1572B6;
+    }
+
+    .js {
+        grid-area: js;
+        background-color:#F7DF1E;
+    }
+
+    .react {
+        grid-area: react;
+        background-color:#61DAFB;
+    }
+    .type {
+        grid-area: type;
+        background-color:#3178C6;
+    }
+
+
+    .node {
+        grid-area: node;
+        background-color:#339933;
+    }
+
+    .next {
+        grid-area: next;
+        background-color:#000000;
+    }
+
+    .mysql {
+        grid-area: mysql;
+        background-color:#4479A1;
+    }
+  }
+}

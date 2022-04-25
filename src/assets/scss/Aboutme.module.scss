@@ -1,0 +1,27 @@
+
+$width:47.7vw;
+
+.profile {
+    width: 100%;
+    height:70vh;
+    display: flex;
+    flex-flow: row nowrap;
+    .profileImg {
+        flex-basis: $width;
+        width: $width;
+        border-width: 0 2px 2px 0;
+        border-color: #333;
+        border-style: solid;
+        
+        img {
+            width: 100%;
+            height: 100%;
+           object-fit: cover;
+        }
+    }
+    .introduce {
+        flex-basis: $width;
+        width: $width;
+    }
+}
+
