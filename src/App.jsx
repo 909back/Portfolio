@@ -3,7 +3,7 @@ import "./assets/scss/common.scss";
 import style from "./assets/scss/App.module.scss";
 import Header from "./components/Header";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
 import AboutMe from "./pages/AboutMe";
 import Skill from "./pages/Skill";
@@ -15,6 +15,7 @@ import Sparkle2 from "./assets/img/Sparkle2.png";
 const App = () => {
   const parallax = React.useRef();
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const onClick = React.useCallback(
     (number) => {
@@ -34,20 +35,49 @@ const App = () => {
       case "/project":
         onClick(2);
         break;
-      case '/contact':
+      case "/contact":
         onClick(3);
         break;
       default:
         onClick(0);
         break;
     }
-  });
+  }, [pathname]);
+
+  React.useEffect(() => {
+    const layers = parallax.current?.content.current;
+    const paths = ["/", "/skill", "/project", "/contact"];
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          const index = entry.target.dataset.index
+          return navigate(paths[index]);
+        }
+      });
+    }, {});
+
+    try {
+      if (layers) {
+        layers.childNodes.forEach((v, i) => {
+          console.log("do");
+          observer.observe(v);
+        });
+      } 
+    } catch (err) {
+      if (err) {
+        return;
+      }
+    }
+  }, [parallax]);
+
   return (
     <>
       <Header onClick={onClick} />
       <main>
-        <Parallax pages={5} style={{ top: "82px" }} ref={parallax}>
+        <Parallax pages={4} style={{ top: "82px" }} ref={parallax}>
           <ParallaxLayer
+            data-index={0}
             offset={0}
             speed={1}
             factor={1}
@@ -57,6 +87,7 @@ const App = () => {
           </ParallaxLayer>
 
           <ParallaxLayer
+            data-index={1}
             offset={1}
             speed={1}
             factor={1}
@@ -66,23 +97,23 @@ const App = () => {
           </ParallaxLayer>
 
           <ParallaxLayer
+            data-index={2}
             offset={2}
-            speed={2}
+            speed={1}
             factor={1}
             style={{ backgroundColor: "#fff" }}
           >
             <Project />
           </ParallaxLayer>
           <ParallaxLayer
+            data-index={3}
             offset={3}
-            speed={2}
+            speed={1}
             factor={1}
             style={{ backgroundColor: "#fff" }}
           >
             <Contact />
           </ParallaxLayer>
-
-
           <ParallaxLayer sticky={{ start: 0, end: 0.3 }}>
             <img
               src={Sparkle2}
@@ -98,10 +129,10 @@ const App = () => {
         </Parallax>
       </main>
       <Routes>
-        <Route path="/" element={this}/>
-        <Route path="/skill" element={this}/>
-        <Route path="/project" element={this}/>
-        <Route path="/contact" element={this}/>
+        <Route path="/" element={this} />
+        <Route path="/skill" element={this} />
+        <Route path="/project" element={this} />
+        <Route path="/contact" element={this} />
       </Routes>
     </>
   );
