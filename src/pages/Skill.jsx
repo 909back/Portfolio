@@ -7,16 +7,15 @@ const Skill = () => {
      <>
      <section className={style.skillPage}>
         <h2>MY SKILL</h2>
-
         <section className={style.skills}>
-          <div className={style.html}>html5</div>
-          <div className={style.css}>css3</div>
-          <div className={style.js}>JavaScript</div>
-          <div className={style.react}>ReactJS</div>
-          <div className={style.node}>NodeJS</div>
-          <div className={style.next}>NextJS</div>
-          <div className={style.mysql}>MySQL</div>
-          <div className={style.type}>TypeScript</div>
+          <article className={style.html}>html5</article>
+          <article className={style.css}>css3</article>
+          <article className={style.js}>JavaScript</article>
+          <article className={style.react}>ReactJS</article>
+          <article className={style.node}>NodeJS</article>
+          <article className={style.next}>NextJS</article>
+          <article className={style.mysql}>MySQL</article>
+          <article className={style.type}>TypeScript</article>
         </section>
 
      </section>

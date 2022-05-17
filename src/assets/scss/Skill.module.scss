@@ -1,7 +1,30 @@
 @mixin border {
-    border: 2px solid #333;
+  border: 2px solid #333;
 }
 
+@mixin keyframes {
+  @keyframes cardHover {
+    0% {
+      transform: perspective(200px) translateZ(30px);
+    }
+
+    50% {
+      transform: perspective(300px) translateZ(50px);
+    }
+
+    100% {
+      transform: perspective(400px) translateZ(100px);
+    }
+  }
+}
+
+@mixin animation($delay, $duration, $name) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $name;
+}
+
+@include keyframes;
 
 .skillPage {
   width: 100%;
@@ -15,61 +38,63 @@
 
   section.skills {
     display: grid;
-    width: 75vw;
-    height: 76vh;
+    width: 70vw;
+    height: 70vh;
     margin: 5px auto;
     @include border;
     background-color: antiquewhite;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-      "html js react"
-      "html js  node"
-      "css  js  next "
-      "css type mysql";
+      "html js type"
+      "html js node"
+      "css react next "
+      "css react mysql";
 
-    div {
-        @include border;
+    article {
+      @include border;
+    }
+    article:hover {
+      @include animation (0,2s,cardHover);
     }
 
     .html {
       grid-area: html;
-      background-color: #E34F26;
+      background-color: #e34f26;
     }
 
     .css {
-        grid-area: css;
-        background-color:#1572B6;
+      grid-area: css;
+      background-color: #1572b6;
     }
 
     .js {
-        grid-area: js;
-        background-color:#F7DF1E;
+      grid-area: js;
+      background-color: #f7df1e;
     }
 
     .react {
-        grid-area: react;
-        background-color:#61DAFB;
+      grid-area: react;
+      background-color: #61dafb;
     }
     .type {
-        grid-area: type;
-        background-color:#3178C6;
+      grid-area: type;
+      background-color: #3178c6;
     }
 
-
     .node {
-        grid-area: node;
-        background-color:#339933;
+      grid-area: node;
+      background-color: #339933;
     }
 
     .next {
-        grid-area: next;
-        background-color:#000000;
+      grid-area: next;
+      background-color: #000000;
     }
 
     .mysql {
-        grid-area: mysql;
-        background-color:#4479A1;
+      grid-area: mysql;
+      background-color: #4479a1;
     }
   }
 }
