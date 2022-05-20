@@ -30,7 +30,6 @@ const Project = () => {
                         </li>
                     </ul>
               </article>
-
           </section>
         </>
     );

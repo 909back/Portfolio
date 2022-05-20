@@ -8,7 +8,9 @@ const Skill = () => {
      <section className={style.skillPage}>
         <h2>MY SKILL</h2>
         <section className={style.skills}>
-          <article className={style.html}>html5</article>
+          <article className={style.html}>
+            
+          </article>
           <article className={style.css}>css3</article>
           <article className={style.js}>JavaScript</article>
           <article className={style.react}>ReactJS</article>

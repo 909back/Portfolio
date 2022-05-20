@@ -6,14 +6,17 @@
   @keyframes cardHover {
     0% {
       transform: perspective(200px) translateZ(30px);
+      backdrop-filter: blur(10px);
     }
 
     50% {
       transform: perspective(300px) translateZ(50px);
+      backdrop-filter: blur(20px);
     }
 
     100% {
       transform: perspective(400px) translateZ(100px);
+      backdrop-filter: blur(30px);
     }
   }
 }

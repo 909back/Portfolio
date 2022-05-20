@@ -5,15 +5,23 @@ body {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   overflow: hidden;
 }
-
-
-
 
 main > div::-webkit-scrollbar{
   width:0;
 }
+
+/* #root {
+  width:100%;
+  height:100%;
+} */
+
+#root > section {
+  position: relative;
+  top:82px;
+  height:calc(100vh - 82px);
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
