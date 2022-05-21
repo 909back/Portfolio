@@ -1,32 +1,43 @@
 @font-face {
-   font-family: Inter;
-   src:url(../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+  font-family: Inter;
+  src: url(../fonts/Inter/Inter-VariableFont_slnt\wght.ttf);
 }
 
 @font-face {
-    font-family: Homemade;
-    src: url(../fonts/Homemade_Apple/HomemadeApple-Regular.ttf);
+  font-family: Homemade;
+  src: url(../fonts/Homemade_Apple/HomemadeApple-Regular.ttf);
 }
 
 @font-face {
-    font-family: NotoSans;
-    src: url(../fonts/Noto_Sans_KR/NotoSansKR-Black.otf);
+  font-family: NotoSans;
+  src: url(../fonts/Noto_Sans_KR/NotoSansKR-Black.otf);
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-
-html,body {
-    font-family: Inter;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+html,
+body {
+  font-family: Inter;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
 }
 
+//for swiper;
+#root {
+  height: 100%;
+}
 
+html,
+body {
+  position: relative;
+  height: 100%;
+}
 
-
-
+.swiper {
+  width: 100%;
+  height: 100%;
+}
