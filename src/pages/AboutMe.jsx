@@ -9,10 +9,10 @@ import github from "../assets/img/github.png";
 import githubLight from "../assets/img/github-light.png";
 import email from "../assets/img/email.png";
 import emailLight from "../assets/img/email-light.png";
+import TypeWriterEffect from "react-typewriter-effect";
 
 const AboutMe = () => {
   const Stars = React.useRef([]);
-  const text = React.useRef();
   const [content, setContent] = React.useState([]);
   const [position, setPosition] = React.useState({ X: 0, Y: 0 });
 
@@ -60,19 +60,22 @@ const AboutMe = () => {
         />
         <header className={style.header}>
           <div className={style.logo}>
+            <div className={style.background}>
+         <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
             <h1>
-              909
-              <br />
-              BACK
+              <p>909</p>
+              <p>BACK</p>
             </h1>
           </div>
           <div className={style.greeting}>
             <div className={style.greetingWrapper}>
-              <p ref={text}>
-                {" "}
-                &#8618; &#91; system &#93; 안녕하세요. 프론트엔드 개발자
-                백은지라고 합니다.
-              </p>
+              <TypeWriterEffect
+                startDelay={200}
+                cursorColor="black"
+                text="&#8618; &#91; system &#93; 안녕하세요. 프론트엔드 개발자 백은지라고 합니다."
+                typeSpeed={100}
+              />
             </div>
           </div>
         </header>
@@ -90,7 +93,7 @@ const AboutMe = () => {
                 꿈을 키우게 되었습니다.
               </p>
               <ul>
-                <li>JavaScript 프레임워크를 위주로 공부하고 있습니다.</li>
+                <li>블라블라블라</li>
                 <li>
                   새로운 기술에 대해 관심이 많고 배우는 것을 두려워하지 않습니다
                 </li>
@@ -102,21 +105,21 @@ const AboutMe = () => {
             </div>
             <div className={style.sns}>
               <div className={`${style.icons} ${style.github}`}>
-                <a href="https://github.com/909back" target='_blank'>
+                <a href="https://github.com/909back" target="_blank">
                   <img src={githubLight} alt="깃허브 아이콘 화이트" />
                   <img src={github} alt="깃허브 아이콘" />
                 </a>
               </div>
 
               <div className={`${style.icons} ${style.velog}`}>
-                <a href="https://velog.io/@909backdev" target='_blank'>
+                <a href="https://velog.io/@909backdev" target="_blank">
                   <img src={velog} alt="벨로그 아이콘" />
                   <img src={velogLight} alt="벨로그 아이콘 화이트" />
                 </a>
               </div>
 
               <div className={`${style.icons} ${style.email}`}>
-                <a href="mailto:ejbaek909@gmail.com" target='_blank'>
+                <a href="mailto:ejbaek909@gmail.com" target="_blank">
                   <img src={emailLight} alt="이메일 아이콘 화이트" />
                   <img src={email} alt="이메일 아이콘" />
                 </a>

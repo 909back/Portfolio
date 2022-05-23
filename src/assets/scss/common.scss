@@ -13,9 +13,25 @@
   src: url(../fonts/Noto_Sans_KR/NotoSansKR-Black.otf);
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+// font-family: 'Bebas Neue', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+// font-family: 'Shrikhand', cursive;
+
+@mixin border {
+  border-width: 0px 2px 2px 2px;
+  border-style: solid;
+  border-color:#222; 
+
+}
+
 * {
   margin: 0;
   padding: 0;
+  scrollbar-width: 0px;
 }
 
 html,
@@ -23,18 +39,22 @@ body {
   font-family: Inter;
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+  position: relative;
 }
 
 //for swiper;
 #root {
   height: 100%;
-}
+  box-sizing: border-box;
+  
+  section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    @include border;
+    box-sizing: border-box;
+  }
 
-html,
-body {
-  position: relative;
-  height: 100%;
 }
 
 .swiper {
