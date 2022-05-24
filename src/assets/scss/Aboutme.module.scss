@@ -69,8 +69,9 @@ section {
 
   .sparkle2 {
     position: absolute;
-    bottom: 60px;
+    bottom: 80px;
     left: 50px;
+    width: 40px;
     transform: perspective(100px) translateZ(20px);
     @include animation;
   }
@@ -103,7 +104,7 @@ section {
         grid-template-rows: repeat(1fr, 3);
 
         span:nth-child(odd) {
-          background-color: black;
+          background-color: #ef6f51;
           box-sizing: border-box;
         }
         

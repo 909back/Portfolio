@@ -18,18 +18,30 @@ $basic_border: 2px solid #222;
       right:0;
       width:100%;
       height: $header_height;
-      border-bottom:$basic_border;
-      line-height:$header_height;
+      border-bottom: $basic_border;
+      line-height:$header_height - 1px;
       text-align: center;
       margin: 0 auto;
+      box-sizing: border-box;
 
-      &.frontend h2 {
-        // background-color:#e9c46a;
+      $red: #e76f51;
+      $yellow: #e9c46a;
+      $green: #8db4ad;
+      $orange:#f4a261;
+      $blue:#264653;
+
+      &.frontend{
+        background-color:#e9c46a;
         color:#e76f51 ;
       }
       
-      &.backend h2 {
-        color:#8db4ad;
+      &.backend{
+        color:$yellow;
+        background-color: #264653;
+
+        h2 {
+          -webkit-text-stroke: 1px $orange;
+        }
       }
       
       h2 {
@@ -41,9 +53,9 @@ $basic_border: 2px solid #222;
 
     }
 
-    &:nth-child(1) .skillList{
-        background-color:#e9c46a;
-    }
+    // &:nth-child(1) .skillList{
+    //     background-color:#e9c46a;
+    // }
 
     .skillList {
       margin-top: $header_height;
@@ -52,7 +64,10 @@ $basic_border: 2px solid #222;
       overflow:auto;
       scrollbar-width: 5px;
       scroll-behavior: smooth;
-      background-color:#264653;
+      background-image: url(../img/pattern.png);
+      background-repeat: repeat;
+      background-size:150px 150px;
+      // background-color:#264653;
       
       &::-webkit-scrollbar{
         width:5px;
@@ -67,6 +82,7 @@ $basic_border: 2px solid #222;
           border: $basic_border;
           border-radius: 20px;
           background-color:#fff;
+          position: relative;
 
           &.html svg {
             fill: #E34F26;
@@ -100,6 +116,10 @@ $basic_border: 2px solid #222;
             fill: #000;
           }
 
+          &.graphql svg {
+            fill: #E10098;
+          }
+
           .title {
             width: 100%;
             height: 40px;
@@ -119,8 +139,8 @@ $basic_border: 2px solid #222;
 
               span {
                 display:inline-block;
-                width: 15px;
-                height: 15px;
+                width: 12px;
+                height: 12px;
                 border-radius: 50%;
                 background-color:yellow;
                 margin: 12px 5px 0 5px;
@@ -151,5 +171,31 @@ $basic_border: 2px solid #222;
           }
         }
     }
+  }
+
+  .sidebar {
+    width: calc(100% - 60vw - 80px);
+    height: 100%;
+    position: relative;
+
+    .desc {
+      width: 50%;
+      height: 50%;
+      border: $basic_border;
+      position: absolute;
+      top: 50%;
+      left:30%;
+      transform: translate(-50%,-50%);
+
+      .head {
+        width: 100%;
+        height: 15%;
+        border-bottom: $basic_border;
+        
+      }
+    }
+    
+
+
   }
 }
