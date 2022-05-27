@@ -28,7 +28,7 @@ const App = () => {
           renderBullet: function (index, className){
             let menu = '';
             switch(index){
-              case 0: 
+              case 0:   
               menu = 'ABOUT ME';
               break;
               case 1: 

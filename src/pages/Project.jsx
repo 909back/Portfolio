@@ -1,5 +1,7 @@
 import React from "react";
 import style from "../assets/scss/Project.module.scss";
+import ProjectItem from "../components/ProjectItem";
+import Dangoon from "../assets/img/dangoon.png";
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,100 +15,36 @@ const Project = () => {
   return (
     <>
       <section className={style.page}>
+        <div className={style.gridTop}>
+          <div className={style.left}></div>
+          <div className={style.right}></div>
+        </div>
 
-        <div className={style.gridTop}></div>
-
-        <Swiper modules={[Navigation]} navigation={true} className={style.Swiper}>
-
+        <Swiper
+          modules={[Navigation]}
+          navigation={true}
+          className={style.Swiper}
+        >
           <SwiperSlide>
-            <article>
-              <div>
-                <img src="" alt="" />
-              </div>
-              <ul>
-                <li>
-                  <h3>project name</h3>
-                </li>
-                <li>
-                  <p>project period</p>
-                </li>
-                <li>
-                  <p>project desc</p>
-                </li>
-                <li>
-                  <p>주요기능</p>
-                </li>
-                <li>
-                  <p>사용한 스택</p>
-                </li>
-                <li>
-                  <p>관련 블로그 글</p>
-                </li>
-              </ul>
-            </article>
+            <ProjectItem styleName={style.dangoon} index={0} image={Dangoon} />
           </SwiperSlide>
 
           <SwiperSlide>
-            <article>
-              <div>
-                <img src="" alt="" />
-              </div>
-              <ul>
-                <li>
-                  <h3>project name</h3>
-                </li>
-                <li>
-                  <p>project period</p>
-                </li>
-                <li>
-                  <p>project desc</p>
-                </li>
-                <li>
-                  <p>주요기능</p>
-                </li>
-                <li>
-                  <p>사용한 스택</p>
-                </li>
-                <li>
-                  <p>관련 블로그 글</p>
-                </li>
-              </ul>
-            </article>
+            <ProjectItem index={1} />
           </SwiperSlide>
 
           <SwiperSlide>
-            <article>
-              <div>
-                <img src="" alt="" />
-              </div>
-              <ul>
-                <li>
-                  <h3>project name</h3>
-                </li>
-                <li>
-                  <p>project period</p>
-                </li>
-                <li>
-                  <p>project desc</p>
-                </li>
-                <li>
-                  <p>주요기능</p>
-                </li>
-                <li>
-                  <p>사용한 스택</p>
-                </li>
-                <li>
-                  <p>관련 블로그 글</p>
-                </li>
-              </ul>
-            </article>
+            <ProjectItem index={1} />
           </SwiperSlide>
         </Swiper>
 
-        <div className={style.gridBottom}></div>
+        <div className={style.gridBottom}>
+          <div className={style.left}></div>
+          <div className={style.right}></div>
+        </div>
       </section>
     </>
   );
-};  
+};
 
 export default Project;

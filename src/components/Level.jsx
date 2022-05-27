@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import level1 from "../assets/img/Level1.png";
-import level2 from "../assets/img/Level2.svg";
+import level2 from "../assets/img/Level2.png";
 
 const Container = styled.div`
   position: absolute;
@@ -49,26 +49,24 @@ const Container = styled.div`
 `;
 
 const Level = ({ type }) => {
+  if(type === 'L'){
+    return (
+      <Container>
+      <div>
+        <img src={level1} alt="I'm learning" />
+      </div>
+      <p>L</p>
+    </Container>
+    )
+  }
   return (
       <>
-    {type === "L" && (
-      <Container>
-        <div>
-          <img src={level1} alt="I'm learning" />
-        </div>
-        <p>L</p>
-      </Container>
-    )}
-
-    { type === "M" && (
         <Container>
           <div>
             <img src={level2} alt="I'm learning" />
           </div>
           <p>M</p>
         </Container>
-      )
-    }
     </>
 
   );

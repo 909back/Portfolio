@@ -2,6 +2,7 @@ import React from "react";
 import style from "../assets/scss/Skill.module.scss";
 import Level from "../components/Level";
 import SkillItem from "../components/SkillItem";
+import SkillSideBar from '../components/SkillSideBar';
 
 const Skill = () => {
   return (
@@ -111,17 +112,8 @@ const Skill = () => {
           </ul>
         </article>
 
-      <article className={style.sidebar}>
-        <div className={style.desc}>
-            <div className={style.head}>
+        <SkillSideBar/>
 
-            </div>
-            <div className={style.content}>
-
-            </div>
-        </div>
-      </article>
-        
       </section>
     </>
   );

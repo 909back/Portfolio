@@ -15,7 +15,7 @@ const SkillItem = ({name,children,styleName,level}) => {
         </div>
          {children}
         <Level type={level}/>
-      </li>
+        </li>
     );
 };
 
