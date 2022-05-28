@@ -4,20 +4,20 @@ $width: 80px;
 
 .swiper-pagination-bullet.app{
     width: $width;
-    --swiper-pagination-bullet-width:$width;
-    --swiper-pagination-bullet-height:$height;
     height:$height;
-    line-height:40px;
     text-align: center;
     font-weight: 700;
     font-size: 1rem;
+    line-height:$height;
     overflow: hidden;
-    background-color:transparent !important;
+    background-color:#fff !important;
+    display:table-row !important;
+    margin: 0 !important;
+    border: 2px solid #222;
+    text-align: center;
     border-radius: 0 !important;
-    border-bottom: 2px solid #333;
     text-decoration: none;
-    color: #333;
-    margin: 10px 0;
+    color: #222;
     cursor: pointer;
 }
 
@@ -25,7 +25,11 @@ $width: 80px;
 
 }
 
-.swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
+.swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical > .swiper-pagination-bullets {
     right: 20px !important; 
+    display: table;
+    border-collapse: collapse;
+    border: 2px solid #222;
+    width:$width;
 }
 

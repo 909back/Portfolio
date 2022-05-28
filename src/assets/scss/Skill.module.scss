@@ -1,5 +1,5 @@
 
-$header_height: 80px;
+$header_height: 90px;
 $basic_border: 2px solid #222;
 
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
@@ -10,11 +10,15 @@ $basic_border: 2px solid #222;
   align-items: center;
 }
 
+$width: calc(30vw + 62px);
+
 .page {
   display:flex;
 
   .container {
-    width: calc(30vw + 40px);
+    flex-basis: $width;
+    flex-shrink: 0;
+    width: $width;
     height: 100%;
     border-right: $basic_border;
     position: relative;
@@ -53,7 +57,7 @@ $basic_border: 2px solid #222;
       }
       
       h2 {
-        font-size: 2rem;
+        font-size: 2.1rem;
         font-family: 'Shrikhand', cursive;
         -webkit-text-stroke: 1px #264653;
         letter-spacing: 2px;

@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: NotoSans;
-  src: url(../fonts/Noto_Sans_KR/NotoSansKR-Black.otf);
+  src: url(../fonts/Noto_Sans_KR/NotoSansKR-Light.otf);
 }
 
 
@@ -22,9 +22,7 @@
 // font-family: 'Shrikhand', cursive;
 
 @mixin border {
-  border-width: 0px 2px 2px 2px;
-  border-style: solid;
-  border-color:#222; 
+  border-bottom: 2px solid #222;
 
 }
 
@@ -46,6 +44,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+  font-size: 14px;
 }
 
 //for swiper;
@@ -56,15 +55,21 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    @include border;
     box-sizing: border-box;
   }
 
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
+#root > .swiper {
+  width: 95vw;
+  height: calc(100vh - 40px);
+  margin: 20px auto;
+  border: 2px solid #222;
+}
+
+#root > .swiper .project  .swiper-slide {
+  flex-basis: calc( 60vw + 80px);
+  flex-shrink: 0;
 }
 
 .swiper-button-next {

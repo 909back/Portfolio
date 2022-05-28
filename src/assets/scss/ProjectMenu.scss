@@ -1,12 +1,13 @@
-.swiper-pagination-bullet.project{
-    width: 20px;
-    height: 20px;
+@mixin item {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
-.swiper-pagination-bullet-active {
-
+.swiper-pagination-current {
+   @include item;
+    
 }
 
-.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 30px;
+.swiper-pagination-total {
+    @include item;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import style from "../assets/scss/Project.module.scss";
 import ProjectItem from "../components/ProjectItem";
 import Dangoon from "../assets/img/dangoon.png";
-
+import Starbucks from '../assets/img/starbucks.png';
 // import required modules
 import { Pagination, Mousewheel, } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,31 +14,29 @@ import "../assets/scss/ProjectMenu.scss"
 const Project = () => {
   return (
     <>
-      <section className={style.page}>
+      <section className="project">
         <Swiper
           pagination={{
-            clickable: true,
-            renderBullet: function (index, className) {
-              return (
-                '<span class="' + className + ' project">' + (index + 1) + "</span>"
-              );
-            },
+            type: "fraction",
           }}
           modules={[Pagination,Mousewheel]}
-          slidesPerView={1}
+          slidesPerView={"auto"}
           mousewheel={true}
           className={style.Swiper}
         >
           <SwiperSlide>
-            <ProjectItem />
+            <ProjectItem Image={Starbucks}/>
           </SwiperSlide>
 
           <SwiperSlide>
-            <ProjectItem index={1} />
+            <ProjectItem Image={Dangoon} />
           </SwiperSlide>
 
           <SwiperSlide>
-            <ProjectItem index={1} />
+            <ProjectItem Image={Starbucks} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProjectItem Image={Dangoon} />
           </SwiperSlide>
         </Swiper>
       </section>
