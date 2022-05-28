@@ -41,7 +41,7 @@ const App = () => {
               menu = 'CONTACT';
               break;
             }
-            return `<span class="${className}">${menu}</span>`;
+            return `<span class="${className} app">${menu}</span>`;
           },
         }}
         speed={600}

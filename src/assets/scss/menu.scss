@@ -1,26 +1,13 @@
 $height: 50px;
-$width: 40px;
+$width: 80px;
 
-.menu {
-    width: $width;
-    height: 100%;
-    line-height: $height;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    overflow: hidden;
-    border-right: 2px solid #333;
-    text-decoration: none;
-    color: #333;
-    cursor: pointer;
-}
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet.app{
     width: $width;
-    --swiper-pagination-bullet-width:$widt;
+    --swiper-pagination-bullet-width:$width;
     --swiper-pagination-bullet-height:$height;
-    height: 80px;
-    line-height: $height;
+    height:$height;
+    line-height:40px;
     text-align: center;
     font-weight: 700;
     font-size: 1rem;
