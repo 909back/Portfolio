@@ -1,0 +1,58 @@
+.contact {
+  width: 90%;
+  height: 90%;
+  padding: 5%;
+
+  .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .form {
+    width: 100%;
+    height: auto;
+
+    div {
+      width: 50%;
+      margin: 15px auto;
+      label {
+        display: inline-block;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-align: left;
+        width: 50px;
+        margin-right: 10px;
+        line-height: 30px;
+      }
+
+      input {
+        display: inline-block;
+        height: 50px;
+        width: 100%;
+        text-indent: 10px;
+        border: 2px solid #222;
+      }
+    }
+
+    textarea {
+      width: calc(50% - 20px);
+      min-height: 200px;
+      height: fit-content;
+      display: block;
+      margin: 15px auto;
+      padding: 10px;
+      font-family: inherit;
+      resize: none;
+      border: 2px solid #222;
+    }
+
+    button {
+      display: block;
+      margin: 15px auto;
+      width: 50%;
+      height: 50px;
+      background-color: antiquewhite;
+      border: 2px solid #222;
+    }
+  }
+}

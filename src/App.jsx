@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination, Parallax } from "swiper";
+import { Pagination, Parallax, Mousewheel } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // pages
@@ -46,7 +46,7 @@ const App = () => {
         }}
         speed={600}
         parallax={true}
-        modules={[Pagination, Parallax]}
+        modules={[Pagination, Parallax,Mousewheel]}
       >
         <SwiperSlide>
           <AboutMe />

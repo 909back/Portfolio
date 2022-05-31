@@ -3,12 +3,12 @@ import style from "../assets/scss/Project.module.scss";
 import config from "../../_config.json";
 import Arrow48 from "../assets/img/arrow48.png";
 
-const ProjectItem = ({ index, Image, styleName }) => {
-  const [data, setData] = React.useState(config.project_info[index]);
+const ProjectItem = ({ data, Image, styleName }) => {
+ console.log(data);
 
   return (
-    <>
-      <section className={style.slide}>
+    <div className={style.wrapper}>
+      <section className={[style.slide,style.starbucks].join(" ")}>
         <div className={style.image}>
           <img src={Image} alt="스타벅스" />
         </div>
@@ -48,7 +48,7 @@ const ProjectItem = ({ index, Image, styleName }) => {
           </div>
         </article>
       </section>
-    </>
+    </div>
   );
 };
 

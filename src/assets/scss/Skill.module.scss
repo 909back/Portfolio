@@ -19,7 +19,7 @@ $width: calc(30vw + 62px);
     flex-basis: $width;
     flex-shrink: 0;
     width: $width;
-    height: 100%;
+    height: calc(100vh - 40px);
     border-right: $basic_border;
     position: relative;
 
@@ -43,23 +43,23 @@ $width: calc(30vw + 62px);
       $blue:#264653;
 
       &.frontend{
-        background-color:#e9c46a;
-        color:#e76f51 ;
+        background-color:#c3c6b1;
+        color:#fff ;
       }
       
       &.backend{
-        color:$yellow;
-        background-color: #264653;
+        color: #c3c6b1 ;
+        background-color:#fff;
 
         h2 {
-          -webkit-text-stroke: 1px $orange;
+          -webkit-text-stroke: 1px #4b533a;
         }
       }
       
       h2 {
-        font-size: 2.1rem;
+        font-size: 2.2rem;
         font-family: 'Shrikhand', cursive;
-        -webkit-text-stroke: 1px #264653;
+        -webkit-text-stroke: 1px #4b533a;
         letter-spacing: 2px;
       }
 
@@ -69,20 +69,30 @@ $width: calc(30vw + 62px);
     //     background-color:#e9c46a;
     // }
 
+    &:nth-child(2) .skillList{
+      background: #c3c6b1;
+
+      &::-webkit-scrollbar{
+        background-color:#c3c6b1;
+        border-radius: 0;
+        width: 10px;
+      }
+      &::-webkit-scrollbar-thumb{
+        background-color:#fff;
+        border-radius: 0;
+        width: 10px;
+      }
+    }
     .skillList {
       margin-top: $header_height;
       width:100%;
-      height: 90%;
+      height: calc(100% - 90px);
       overflow:auto;
       scrollbar-width: 5px;
       scroll-behavior: smooth;
-      background-image: url(../img/pattern.png);
-      background-repeat: repeat;
-      background-size:150px 150px;
+
       
-      &::-webkit-scrollbar{
-        width:5px;
-      }
+     
 
         .skill {
           list-style: none;

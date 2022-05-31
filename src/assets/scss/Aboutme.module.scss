@@ -56,7 +56,6 @@ $width: 30vw;
 section {
   width: 100%;
   height: 100%;
-  @include border;
 
   .sparkle1 {
     position: absolute;
@@ -104,7 +103,7 @@ section {
         grid-template-rows: repeat(1fr, 3);
 
         span:nth-child(odd) {
-          background-color: #ef6f51;
+          background-color: #c3c6b1;
           box-sizing: border-box;
         }
         
@@ -145,12 +144,12 @@ section {
       text-indent: 20px;
       overflow: hidden;
 
-      p {
+      h1 {
         width: 100%;
         height: 100%;
         font-weight: 700;
         letter-spacing: 1px;
-        font-size: 2.5rem;
+        font-size: 1.3rem;
       }
     }
   }
