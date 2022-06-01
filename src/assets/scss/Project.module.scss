@@ -35,8 +35,22 @@ $test_color4: #eec9b7;
       color: $fontcolor !important;
     }
   }
-  span {
-    background-color: $fontcolor !important;
+  li {
+
+    &:nth-child(3){ 
+      span {
+        background-color: $fontcolor !important;   
+      }
+    }
+
+    &:nth-child(4){ 
+      span {
+        background-color: $fontcolor !important;   
+        opacity: 0.84;
+      }
+    }
+
+
   }
 
   a:before {
@@ -53,7 +67,7 @@ $test_color4: #eec9b7;
   transform: translate(-50%, 0);
   font-family: "Shrikhand", cursive;
   -webkit-text-stroke: 1px #222;
-  color: white;
+  color: #c3c6b1;
   z-index: 99;
 }
 
@@ -82,7 +96,13 @@ $width: calc(30vw + 62px);
 
 
     &.starbucks {
-      @include projectItem(green);
+      @include projectItem(#006241);
+    }
+    &.baskin {
+      @include projectItem(#0360b0);
+    }
+    &.dangoon {
+      @include projectItem(#ff9500);
     }
 
     .image {
@@ -93,17 +113,17 @@ $width: calc(30vw + 62px);
         width: 100%;
         height: 100%;
         object-fit: cover;
-        // margin: 2.5%;
-        object-position: 0 -1px;
+        object-position: 50% 0;
       }
     }
 
     .info {
+      height:100%;
       grid-area: info;
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
-      gap: 20px;
+      gap: 5px;
 
       .title {
         flex: 0 1 10%;
@@ -112,19 +132,19 @@ $width: calc(30vw + 62px);
           font-size: 2.5rem;
           text-align: center;
           color: $green;
-        }
+        } 
       } 
 
       ul {
-        flex: 0 1 20%;
+        flex: 0 1 fit-content;
         width: 100%;
         height: fit-content;
-        list-style: none;
+        list-style: none; 
         text-align: center;
         
 
         li {
-          display: block;
+          // display: block;
           width: 80%;
           min-height: 30px;
           height: fit-content;
@@ -135,13 +155,13 @@ $width: calc(30vw + 62px);
 
           span {
             display: inline-block;
-            height: 25px;
-            line-height: 25px;
+            height: 30px;
+            line-height: 28px;
             text-align: center;
             margin: 5px 10px 0 0;
             background-color: $green;
             border-radius: 30px;
-            padding: 5px 8px;
+            padding: 5px 15px;
             color: #fff;
           }
         }

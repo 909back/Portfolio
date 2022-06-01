@@ -6,14 +6,9 @@ const SkillItem = ({name,children,styleName,level}) => {
     return (
         <li className={[style.skill,styleName].join(" ")}>
         <div className={style.title}>
-          <div className={style.buttons}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
           {name}
         </div>
-         {children}
+         <div className={style.icon}>{children}</div>
         <Level type={level}/>
         </li>
     );

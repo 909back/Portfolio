@@ -8,41 +8,36 @@ const ProjectItem = ({ data, Image, styleName }) => {
 
   return (
     <div className={style.wrapper}>
-      <section className={[style.slide,style.starbucks].join(" ")}>
+      <section className={[style.slide,styleName || null].join(" ")}>
         <div className={style.image}>
           <img src={Image} alt="스타벅스" />
         </div>
         <article className={style.info}>
           <div className={style.title}>
-            <h2>Starbucks</h2>
+            <h2>{data.name}</h2>
           </div>
           <ul>
-            <li>2021.11</li>
-            <li>스타벅스, 베스킨라빈스 메인 페이지 클론코딩</li>
+            <li>{data.period}</li>
+            <li>{data.description}</li>
             <li>
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
+              {data.skills.map(skill => <span>{skill}</span>)}
             </li>
             <li>
-              <span>캐러셀 구현 </span>
-              <span>css transform</span>
-              <span>transition 활용</span>
-              <span>시맨틱 웹 구현</span>
+            {data.func.map(item => <span>{item}</span>)}
             </li>
           </ul>
           <div className={style.link}>
             
           <div className={style.github}>
-            <a href="">
+            <a href={data.github}>
               <img src={Arrow48} alt="" />
               Github
             </a>
           </div>
           <div className={style.demo}>
-            <a href="">
+            <a href={data.domain}>
               <img src={Arrow48} alt="" />
-              Demo
+              See Live
             </a>
           </div>
           </div>

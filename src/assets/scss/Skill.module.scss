@@ -1,8 +1,7 @@
-
-$header_height: 90px;
+$header_height: 100px;
 $basic_border: 2px solid #222;
 
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 
 @mixin item-center {
   display: flex;
@@ -13,7 +12,7 @@ $basic_border: 2px solid #222;
 $width: calc(30vw + 62px);
 
 .page {
-  display:flex;
+  display: flex;
 
   .container {
     flex-basis: $width;
@@ -23,181 +22,165 @@ $width: calc(30vw + 62px);
     border-right: $basic_border;
     position: relative;
 
+    &:nth-child(2) {
+      background-color: #c3c6b1;
+
+      .title {
+        background-color: #fff !important;
+        color:#000 !important;
+      }
+
+    }
+
     .skillHeader {
-      position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      width:100%;
+      width: 70%;
       height: $header_height;
-      border-bottom: $basic_border;
-      line-height:$header_height - 1px;
+      border: $basic_border;
+      border-radius: 50%;
+      line-height: $header_height - 1px;
       text-align: center;
-      margin: 0 auto;
+      margin: 20px auto;
       box-sizing: border-box;
 
       $red: #e76f51;
       $yellow: #e9c46a;
       $green: #8db4ad;
-      $orange:#f4a261;
-      $blue:#264653;
+      $orange: #f4a261;
+      $blue: #264653;
 
-      &.frontend{
-        background-color:#c3c6b1;
-        color:#fff ;
+      &.frontend {
+        background-color: #c3c6b1;
+        color: #fff;
       }
-      
-      &.backend{
-        color: #c3c6b1 ;
-        background-color:#fff;
+
+      &.backend {
+        color: #c3c6b1;
+        background-color: #fff;
 
         h2 {
           -webkit-text-stroke: 1px #4b533a;
         }
       }
-      
+
       h2 {
         font-size: 2.2rem;
-        font-family: 'Shrikhand', cursive;
+        font-family: "Shrikhand", cursive;
         -webkit-text-stroke: 1px #4b533a;
         letter-spacing: 2px;
       }
-
     }
 
-    // &:nth-child(1) .skillList{
-    //     background-color:#e9c46a;
-    // }
-
-    &:nth-child(2) .skillList{
-      background: #c3c6b1;
-
-      &::-webkit-scrollbar{
-        background-color:#c3c6b1;
-        border-radius: 0;
-        width: 10px;
-      }
-      &::-webkit-scrollbar-thumb{
-        background-color:#fff;
-        border-radius: 0;
-        width: 10px;
-      }
+    @mixin first-cols {
+      border-right: $basic_border;
     }
+
     .skillList {
-      margin-top: $header_height;
-      width:100%;
-      height: calc(100% - 90px);
-      overflow:auto;
+      width: 100%;
+      height: calc(100% - 140px);
       scrollbar-width: 5px;
       scroll-behavior: smooth;
+      background: #fff;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 33vh 11vh 33vh;
+      grid-template-areas:
+        "first second"
+        "third second"
+        "third  four";
 
-      
-     
+      .skill {
+        list-style: none;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        border-top: $basic_border;
 
-        .skill {
-          list-style: none;
-          width: 70%;
-          min-height: 20vh;
-          height:30vh;
-          margin: 20px auto;
-          border: $basic_border;
-          border-radius: 20px;
-          background-color:#fff;
-          position: relative;
-          overflow:hidden;
-
-          &.html svg {
-            fill: #E34F26;
+        &.html {
+          grid-area: first;
+          @include first-cols();
+          svg {
+            fill: #e34f26;
           }
+        }
 
-          &.html svg {
-            fill: #E34F26;
+        &.css {
+          grid-area: second;
+          svg {
+            fill: #1572b6;
           }
+        }
 
-          &.css svg {
-            fill: #1572B6;
+        &.js {
+          grid-area: third;
+          @include first-cols();
+          svg {
+            fill: #f7df1e;
           }
+        }
 
-          &.js svg {
-            fill: #F7DF1E;
+        &.react {
+          grid-area: four;
+          svg {
+            fill: #61dafb;
           }
+        }
 
-          &.react svg {
-            fill: #61DAFB;
-          }
-
-          &.node svg {
+        &.node {
+          grid-area: first;
+          @include first-cols();
+          svg {
             fill: #339933;
           }
+        }
 
-          &.mysql svg {
-            fill: #4479A1;
+        &.mysql {
+          grid-area: second;
+          svg {
+            fill: #4479a1;
           }
+        }
 
-          &.next svg {
+        &.next {
+          grid-area: third;
+          @include first-cols();
+          svg {
             fill: #000;
           }
-
-          &.graphql svg {
-            fill: #E10098;
-          }
-
-          .title {
-            width: 100%;
-            height: 40px;
-            border-bottom: $basic_border;
-            font-size: 1.1rem;
-            font-weight: 700;
-            line-height:40px;
-            display:flex;
-            gap: 10px;
-    
-
-            .buttons {
-              width: 30%;
-              height:100%;
-              text-align: center;
-              border-right: $basic_border;
-
-              span {
-                display:inline-block;
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                background-color:yellow;
-                margin: 12px 5px 0 5px;
-                border: 1px solid #222;
-         
-                
-                &:first-child{
-                  background-color:#e76f51;
-                }
-                
-                &:nth-child(2){
-                  background-color: #e9c46a;
-                }
-                
-                &:nth-child(3){
-                  background-color: #2a9d8f;
-                }
-              }
-            }
-
-          }
-
-          &:hover .skillDetail {
-            transform: translate(0,-100%);
-            
-          }
-  
-            svg {
-              width: 120px;
-              height: 120px;
-              display:block;
-              margin: calc((30vh - 160px)/2) auto;
-            }
-        
         }
+
+        &.graphql {
+          grid-area: four;
+          svg {
+            fill: #e10098;
+          }
+        }
+
+        .title {
+          width: 100%;
+          height: 40px;
+          border-bottom: $basic_border;
+          font-size: 1.2rem;
+          font-weight: 700;
+          line-height: 40px;
+          text-align: center;
+          //background-color: #c3c6b1;
+        }
+
+        &:hover .skillDetail {
+          transform: translate(0, -100%);
+        }
+
+        .icon {
+          width: 100%;
+          height: calc(100% - 40px);
+          @include item-center;
+
+          svg {
+            width: 130px;
+            height: auto;
+          }
+        }
+      }
     }
   }
 
@@ -211,47 +194,49 @@ $width: calc(30vw + 62px);
       height: 50%;
       border: $basic_border;
       position: absolute;
-      top: 50%;
-      left:34%;
-      transform: translate(-50%,-50%);
+      top: 140px;
+      left: 10px;
       transition: height 0.3s ease-in-out;
+      cursor: pointer;
 
       &.hide {
         height: 10%;
         transition: height 0.3s ease-in;
 
-        .head{
+        .head {
           height: 100%;
-          transition:inherit;
+          transition: inherit;
         }
-
-
         .content {
-          height:0;
+          height: 0;
           display: none;
-          transition: display,height 0.3s ease-in;
+          transition: all 0.3s ease-in;
 
           .levelM {
-            height:0;
+            height: 0;
             display: none;
-            transition:inherit;
+            transition: inherit;
 
-            div,p,img {
-              height: 0;
+            div,
+            p,
+            img {
+              height:0;
               display: none;
-              transition:inherit;
+              transition: inherit;
             }
           }
 
           .levelL {
-            height:0;
+            height: 0;
             display: none;
-            transition:inherit;
+            transition: inherit;
 
-            div,p,img {
-              height: 0;
+            div,
+            p,
+            img {
+              height:0;
               display: none;
-              transition:inherit;
+              transition: inherit;
             }
           }
         }
@@ -278,9 +263,8 @@ $width: calc(30vw + 62px);
       .content {
         width: 100%;
         height: 85%;
-        display:block;
-        transition: display,height 0.4s ease-in;
-
+        display: block;
+        transition: all 0.3s ease-in;
 
         .levelM {
           width: 100%;
@@ -288,8 +272,12 @@ $width: calc(30vw + 62px);
           text-align: center;
           font-size: 0.8rem;
           @include item-center;
-          flex-flow: column wrap;
-          transition:inherit;
+          flex-flow: column nowrap;
+          transition: all 0.3s ease-in;
+
+          img, p {
+            transition: all 0.3s ease-in;
+          }
         }
         .levelL {
           width: 100%;
@@ -297,16 +285,14 @@ $width: calc(30vw + 62px);
           text-align: center;
           font-size: 0.8rem;
           @include item-center;
-          flex-flow: column wrap;
-          transition:inherit;
+          flex-flow: column nowrap;
+          transition: all 0.3s ease-in;
+
+          img, p {
+            transition: all 0.3s ease-in;
+          }
         }
       }
-
-
-
     }
-    
-
-
   }
 }

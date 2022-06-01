@@ -2,8 +2,9 @@ import React from "react";
 import style from "../assets/scss/Project.module.scss";
 import ProjectItem from "../components/ProjectItem";
 import config from '../../_config.json';
-import Dangoon from "../assets/img/dangoon.png";
+import Dangoon from "../assets/img/dangoon2.png";
 import Starbucks from '../assets/img/starbucks.png';
+import Baskin from '../assets/img/baskin.png';
 
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -28,18 +29,18 @@ const Project = () => {
           className={style.Swiper}
         >
           <SwiperSlide>
-            <ProjectItem Image={Starbucks} data={config.project_info[0]}/>
+            <ProjectItem Image={Starbucks} data={config.project_info[0]} styleName={style.starbucks}/>
           </SwiperSlide>
 
           <SwiperSlide>
-            <ProjectItem Image={Dangoon} />
+            <ProjectItem Image={Baskin} data={config.project_info[1]} styleName={style.baskin}/>
           </SwiperSlide>
 
           <SwiperSlide>
-            <ProjectItem Image={Starbucks} />
+            <ProjectItem Image={Dangoon} data={config.project_info[2]} styleName={style.dangoon}/>
           </SwiperSlide>
           <SwiperSlide>
-            <ProjectItem Image={Dangoon} />
+            <ProjectItem Image={Dangoon} data={config.project_info[3]} />
           </SwiperSlide>
         </Swiper>
       </section>
