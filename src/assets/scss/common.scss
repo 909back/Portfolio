@@ -21,8 +21,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 // font-family: 'Shrikhand', cursive;
 
+$basic_border: 2px solid #222;
+
+
 @mixin border {
-  border-bottom: 2px solid #222;
+  border-bottom: $basic_border;
 
 }
 
@@ -46,6 +49,7 @@ body {
   position: relative;
   font-size: 14px;
   overflow: hidden;
+  background-color:#f6f4f2;
 }
 
 //for swiper;
@@ -56,7 +60,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-bottom: 2px solid #222;
+    border-bottom: $basic_border;
     box-sizing: border-box;
   }
 
@@ -66,7 +70,7 @@ body {
   width: 95vw;
   height: calc(100vh - 40px);
   margin: 20px auto;
-  border: 2px solid #222;
+  border: $basic_border;
 }
 
 #root > .swiper .project  .swiper-slide {

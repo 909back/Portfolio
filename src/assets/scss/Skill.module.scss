@@ -1,5 +1,13 @@
 $header_height: 100px;
 $basic_border: 2px solid #222;
+$basic_color: #8db4ad;
+
+$ivory: #f6f4f2;
+$yellow: #ffb975;
+$maroon: #49403b;
+$othergreen: #4c7a62;
+$green: #31422e;
+$maroon: #49403b;
 
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 
@@ -23,13 +31,12 @@ $width: calc(30vw + 62px);
     position: relative;
 
     &:nth-child(2) {
-      background-color: #c3c6b1;
+      background-color: $othergreen;
 
       .title {
-        background-color: #fff !important;
-        color:#000 !important;
+        background-color: $ivory !important;
+        color: #000 !important;
       }
-
     }
 
     .skillHeader {
@@ -42,30 +49,24 @@ $width: calc(30vw + 62px);
       margin: 20px auto;
       box-sizing: border-box;
 
-      $red: #e76f51;
-      $yellow: #e9c46a;
-      $green: #8db4ad;
-      $orange: #f4a261;
-      $blue: #264653;
-
       &.frontend {
-        background-color: #c3c6b1;
-        color: #fff;
+        background-color: $othergreen;
+        color: $ivory;
       }
 
       &.backend {
-        color: #c3c6b1;
-        background-color: #fff;
+        color: $yellow;
+        background-color: $ivory;
 
         h2 {
-          -webkit-text-stroke: 1px #4b533a;
+          -webkit-text-stroke: 1px $maroon;
         }
       }
 
       h2 {
         font-size: 2.2rem;
         font-family: "Shrikhand", cursive;
-        -webkit-text-stroke: 1px #4b533a;
+        -webkit-text-stroke: 1px $maroon;
         letter-spacing: 2px;
       }
     }
@@ -79,7 +80,7 @@ $width: calc(30vw + 62px);
       height: calc(100% - 140px);
       scrollbar-width: 5px;
       scroll-behavior: smooth;
-      background: #fff;
+      background: $ivory;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 33vh 11vh 33vh;
@@ -90,7 +91,7 @@ $width: calc(30vw + 62px);
 
       .skill {
         list-style: none;
-        background-color: #fff;
+        background-color: $ivory;
         position: relative;
         overflow: hidden;
         border-top: $basic_border;
@@ -159,11 +160,12 @@ $width: calc(30vw + 62px);
           width: 100%;
           height: 40px;
           border-bottom: $basic_border;
-          font-size: 1.2rem;
+          font-size: 1.3rem;
           font-weight: 700;
           line-height: 40px;
           text-align: center;
-          //background-color: #c3c6b1;
+          // background-color: $othergreen;
+          // color:$ivory;
         }
 
         &:hover .skillDetail {
@@ -190,57 +192,55 @@ $width: calc(30vw + 62px);
     position: relative;
 
     .desc {
+      height: 10%;
       width: 50%;
-      height: 50%;
       border: $basic_border;
       position: absolute;
       top: 140px;
       left: 10px;
-      transition: height 0.3s ease-in-out;
       cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
 
-      &.hide {
-        height: 10%;
-        transition: height 0.3s ease-in;
+      .head {
+        height: 100%;
+        width: 100%;
+        border-bottom: $basic_border;
+        letter-spacing: 1px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        @include item-center;
+        text-indent: -10px;
+        transition: inherit;
 
-        .head {
-          height: 100%;
-          transition: inherit;
-        }
-        .content {
-          height: 0;
-          display: none;
-          transition: all 0.3s ease-in;
-
-          .levelM {
-            height: 0;
-            display: none;
-            transition: inherit;
-
-            div,
-            p,
-            img {
-              height:0;
-              display: none;
-              transition: inherit;
-            }
-          }
-
-          .levelL {
-            height: 0;
-            display: none;
-            transition: inherit;
-
-            div,
-            p,
-            img {
-              height:0;
-              display: none;
-              transition: inherit;
-            }
-          }
+        img {
+          width: 38px;
+          height: 38px;
+          position: relative;
+          left: -10px;
         }
       }
+      .content {
+        opacity: 0;
+        height: 0;
+        display: none;
+        transition: all 0.6s ease-in 3s;
+
+        .levelM {
+          display: none;
+          opacity: 0;
+        }
+
+        .levelL {
+          display: none;
+          opacity: 0;
+        }
+      }
+    }
+
+    .show {
+      width: 50%;
+      height: 50%;
+      border: $basic_border;
 
       .head {
         width: 100%;
@@ -251,20 +251,14 @@ $width: calc(30vw + 62px);
         font-weight: 600;
         @include item-center;
         text-indent: -10px;
-
-        img {
-          width: 38px;
-          height: 38px;
-          position: relative;
-          left: -10px;
-        }
       }
 
       .content {
         width: 100%;
         height: 85%;
         display: block;
-        transition: all 0.3s ease-in;
+        opacity: 1;
+
 
         .levelM {
           width: 100%;
@@ -272,12 +266,8 @@ $width: calc(30vw + 62px);
           text-align: center;
           font-size: 0.8rem;
           @include item-center;
+          opacity: 1;
           flex-flow: column nowrap;
-          transition: all 0.3s ease-in;
-
-          img, p {
-            transition: all 0.3s ease-in;
-          }
         }
         .levelL {
           width: 100%;
@@ -286,11 +276,7 @@ $width: calc(30vw + 62px);
           font-size: 0.8rem;
           @include item-center;
           flex-flow: column nowrap;
-          transition: all 0.3s ease-in;
-
-          img, p {
-            transition: all 0.3s ease-in;
-          }
+          opacity: 1;
         }
       }
     }

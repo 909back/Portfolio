@@ -16,7 +16,6 @@ const Contact = () => {
         <label className={style.label} htmlFor="">TITLE</label>
         <input className={style.input} type="text" placeholder="INPUT TITLE" />
           </div>
-        <textarea className={style.textarea} type="text" placeholder="TEXT" />
         <button type='submit'>SEND</button>
       </form>
     </section>

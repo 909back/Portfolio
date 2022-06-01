@@ -39,17 +39,17 @@ const Container = styled.div`
 `;
 
 const SkillSideBar = () => {
-  const [ hide, setHide ] = React.useState(true);
+  const [ show, setShow ] = React.useState(false);
 
   const onClickSidebar = () => {
-    setHide((prevState)=> !prevState);
+    setShow((prevState)=> !prevState);
   }
 
   return (
     <article className={style.sidebar}>
-      <div className={hide ? [style.desc,style.hide].join(' ') : style.desc}>
+      <div className={show ? [style.desc,style.show].join(' ') : style.desc}>
         <div className={style.head} onClick={onClickSidebar}>
-         { hide && <img src={Arrow48} alt="" /> }
+         { !show && <img src={Arrow48} alt="" /> }
           LEVEL MARK
           </div>
 

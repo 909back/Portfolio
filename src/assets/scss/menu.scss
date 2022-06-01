@@ -1,6 +1,9 @@
-$height: 50px;
+$height: 60px;
 $width: 80px;
-
+$ivory: #f6f4f2;
+$yellow: #ffd02c;
+$green : #31422e;
+$othergreen: #4C7A62;
 
 .swiper-pagination-bullet.app{
     width: $width;
@@ -10,26 +13,21 @@ $width: 80px;
     font-size: 1rem;
     line-height:$height;
     overflow: hidden;
-    background-color:#fff !important;
-    display:table-row !important;
-    margin: 0 !important;
+    margin: 10px auto !important;
     border: 2px solid #222;
     text-align: center;
-    border-radius: 0 !important;
+    border-radius:50% !important;
     text-decoration: none;
-    color: #222;
+    color: $ivory;
+    background:$green;
     cursor: pointer;
 }
 
 .swiper-pagination-bullet-active {
-
+    color:#ffd02c !important;
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical > .swiper-pagination-bullets {
     right: 20px !important; 
-    display: table;
-    border-collapse: collapse;
-    border: 2px solid #222;
-    width:$width;
 }
 

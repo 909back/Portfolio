@@ -1,7 +1,14 @@
 $width: 30vw;
+$basic_color:#4C7A62;
+$basic_border: 2px solid #222;
+$ivory: #f6f4f2;
+$yellow: #ffd02c;
+$maroon : #49403B;
+$green : #31422e;
+$othergreen: #4C7A62;
 
 @mixin border {
-  border: 2px solid #222;
+  border: $basic_border;
 }
 
 @mixin item-center {
@@ -78,7 +85,7 @@ section {
   .header {
     width: 100%;
     height: 12vh;
-    border-bottom: 2px solid #222;
+    border-bottom: $basic_border;
     display: flex;
 
     .logo {
@@ -87,9 +94,9 @@ section {
       width: 20vw;
       height: 100%;
       text-align: center;
-      border-right: 2px solid #222;
+      border-right: $basic_border;
       @include item-center;
-      background-color: #000;
+      background-color: transparent;
       position: relative;
 
       .background {
@@ -103,12 +110,12 @@ section {
         grid-template-rows: repeat(1fr, 3);
 
         span:nth-child(odd) {
-          background-color: #c3c6b1;
+          background-color: $basic_color;
           box-sizing: border-box;
         }
         
         span:nth-child(even) {
-          background-color:#fff;
+          background-color:transparent;
           box-sizing: border-box;
         }
       }
@@ -169,7 +176,7 @@ section {
       height: 80%;
       margin: 40px 20px;
       border-radius: 50%;
-      border: 2px solid #333;
+      border: 2px solid #222;
       overflow: hidden;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
@@ -183,14 +190,13 @@ section {
       flex-basis: calc(65vw - 120px);
       width: calc(65vw - 120px);
       height: calc(82.7vh - 124px);
-      border-left: 2px solid #222;
+      border-left: $basic_border;
       padding: 60px;
-      font-size: 0.9rem;
       line-height: 1.5rem;
+      font-size: 1.08rem;
 
       h2 {
-        font-size: 1.5rem;
-        background-color: white;
+        font-size: 1.9rem;
         width: 150px;
         line-height: 3rem;
         letter-spacing: 1px;
@@ -198,7 +204,14 @@ section {
       }
 
       p {
-        margin: 20px 0;
+        margin: 10px 0;
+
+        &:first-child{
+          width:fit-content;
+          background-color:$yellow;
+          color:$maroon; 
+          font-size: 1.2rem;
+        }
       }
 
       ul {
