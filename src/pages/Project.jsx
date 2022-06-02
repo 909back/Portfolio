@@ -5,6 +5,8 @@ import config from '../../_config.json';
 import Dangoon from "../assets/img/dangoon2.png";
 import Starbucks from '../assets/img/starbucks.png';
 import Baskin from '../assets/img/baskin.png';
+import Portfolio from '../assets/img/portfolio.png';
+
 
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -40,7 +42,7 @@ const Project = () => {
             <ProjectItem Image={Dangoon} data={config.project_info[2]} styleName={style.dangoon}/>
           </SwiperSlide>
           <SwiperSlide>
-            <ProjectItem Image={Dangoon} data={config.project_info[3]} />
+            <ProjectItem Image={Portfolio} data={config.project_info[3]} />
           </SwiperSlide>
         </Swiper>
       </section>

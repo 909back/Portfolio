@@ -46,11 +46,16 @@ const SkillSideBar = () => {
   }
 
   return (
-    <article className={style.sidebar}>
-      <div className={show ? [style.desc,style.show].join(' ') : style.desc}>
+    <>
+      <div className={[style.hide, show ? style.desc : null].join(' ')}>
         <div className={style.head} onClick={onClickSidebar}>
+          <p>
+          LEVEL
+          </p>
+          <p>
+            MARK
+          </p>
          { !show && <img src={Arrow48} alt="" /> }
-          LEVEL MARK
           </div>
 
         <div className={style.content}>
@@ -73,8 +78,9 @@ const SkillSideBar = () => {
         <p>프로젝트를 만든 경험이 있고 <br/>자주 사용하는 언어입니다. </p>
           </article>
         </div>
+
       </div>
-    </article>
+    </>
   );
 };
 

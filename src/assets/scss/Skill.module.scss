@@ -17,7 +17,7 @@ $maroon: #49403b;
   align-items: center;
 }
 
-$width: calc(30vw + 62px);
+$width: calc(39vw + 62px);
 
 .page {
   display: flex;
@@ -31,7 +31,7 @@ $width: calc(30vw + 62px);
     position: relative;
 
     &:nth-child(2) {
-      background-color: $othergreen;
+      background-color: $green;
 
       .title {
         background-color: $ivory !important;
@@ -50,8 +50,8 @@ $width: calc(30vw + 62px);
       box-sizing: border-box;
 
       &.frontend {
-        background-color: $othergreen;
-        color: $ivory;
+        background-color: $green;
+        color: $yellow;
       }
 
       &.backend {
@@ -76,12 +76,15 @@ $width: calc(30vw + 62px);
     }
 
     .skillList {
-      width: 100%;
+      width: 92%;
       height: calc(100% - 140px);
       scrollbar-width: 5px;
       scroll-behavior: smooth;
       background: $ivory;
       display: grid;
+      margin: auto;
+      border-left: $basic_border;
+      border-right: $basic_border;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 33vh 11vh 33vh;
       grid-template-areas:
@@ -186,98 +189,96 @@ $width: calc(30vw + 62px);
     }
   }
 
-  .sidebar {
-    width: calc(100% - 60vw - 80px);
-    height: 100%;
-    position: relative;
+  .hide {
+    width: 70px;
+    height: 90px;
+    padding-top: 10px;
+    border: $basic_border;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 99;
+    cursor: pointer;
+    background-color: $ivory;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
 
-    .desc {
-      height: 10%;
-      width: 50%;
-      border: $basic_border;
-      position: absolute;
-      top: 140px;
-      left: 10px;
-      cursor: pointer;
-      transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+    .head {
+      height: 100%;
+      width: 100%;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: inherit;
+      text-align: center;
+      line-height: 1.6rem;
 
-      .head {
-        height: 100%;
-        width: 100%;
-        border-bottom: $basic_border;
-        letter-spacing: 1px;
-        font-size: 1.3rem;
-        font-weight: 600;
-        @include item-center;
-        text-indent: -10px;
-        transition: inherit;
-
-        img {
-          width: 38px;
-          height: 38px;
-          position: relative;
-          left: -10px;
-        }
-      }
-      .content {
-        opacity: 0;
-        height: 0;
-        display: none;
-        transition: all 0.6s ease-in 3s;
-
-        .levelM {
-          display: none;
-          opacity: 0;
-        }
-
-        .levelL {
-          display: none;
-          opacity: 0;
-        }
+      img {
+        width: 38px;
+        height: 38px;
+        transform: rotate(90deg);
       }
     }
 
-    .show {
-      width: 50%;
-      height: 50%;
-      border: $basic_border;
+    .content {
+      opacity: 0;
+      height: 0;
+      display: none;
+  
+      .levelM {
+        opacity: 0;
+        display: none;
+          }
 
-      .head {
+      .levelL {
+        opacity: 0;
+        display: none;
+          }
+    }
+  }
+
+  .desc {
+    width: 50%;
+    height: 50%;
+    border: $basic_border;
+    z-index: 98;
+    background-color: $ivory;
+    
+
+    .head {
+      width: 100%;
+      height: 15%;
+      border-bottom: $basic_border;
+      letter-spacing: 1px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      @include item-center;
+      gap: 5px;
+    }
+
+    .content {
+      width: 100%;
+      height: 85%;
+      display: block;
+      opacity: 1;
+
+      .levelM {
         width: 100%;
-        height: 15%;
-        border-bottom: $basic_border;
-        letter-spacing: 1px;
-        font-size: 1.3rem;
-        font-weight: 600;
+        height: 50%;
+        text-align: center;
+        font-size: 0.8rem;
         @include item-center;
-        text-indent: -10px;
+        opacity: 1;
+        flex-flow: column nowrap;
       }
 
-      .content {
+      .levelL {
         width: 100%;
-        height: 85%;
-        display: block;
+        height: 50%;
+        text-align: center;
+        font-size: 0.8rem;
+        @include item-center;
+        flex-flow: column nowrap;
         opacity: 1;
-
-
-        .levelM {
-          width: 100%;
-          height: 50%;
-          text-align: center;
-          font-size: 0.8rem;
-          @include item-center;
-          opacity: 1;
-          flex-flow: column nowrap;
-        }
-        .levelL {
-          width: 100%;
-          height: 50%;
-          text-align: center;
-          font-size: 0.8rem;
-          @include item-center;
-          flex-flow: column nowrap;
-          opacity: 1;
-        }
       }
     }
   }

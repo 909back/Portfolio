@@ -174,11 +174,17 @@ $width: calc(30vw + 62px);
 
       .link {
         flex: 0 1 10%;
+        margin: 10px auto 0 auto;
 
         div {
+          display: inline-block;
           width: fit-content;
           position: relative;
-          margin: auto;
+
+          &:first-child {
+            margin-right: 30px;
+          }
+  
 
           a {
             display: block;

@@ -1,11 +1,23 @@
+
+$ivory: #f6f4f2;
+$yellow: #ffd02c;
+$maroon : #49403B;
+$othergreen: #4C7A62;
+$green : #31422e;
+
+
+
 .contact {
   width: 90%;
   height: 90%;
-  padding: 5%;
+  padding: 3%;
+  position: relative;
 
   .title {
     font-size: 3rem;
     text-align: center;
+    color: $green;
+    font-family: 'Shrikhand', cursive;
   }
 
   .form {
@@ -14,7 +26,7 @@
 
     div {
       width: 50%;
-      margin: 15px auto;
+      margin: 10px auto;
       label {
         display: inline-block;
         font-size: 1.1rem;
@@ -51,8 +63,51 @@
       margin: 15px auto;
       width: 50%;
       height: 50px;
-      background-color: antiquewhite;
+      background-color: $green;
+      color: $ivory;
       border: 2px solid #222;
+    }
+  }
+
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30vw;
+    height: 40vh;
+    background-color:$ivory;
+    border: 2px solid #222;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    h3 {
+      font-size: 2.5rem;
+      font-family: 'Shrikhand', cursive;
+      color: $green;
+    }
+
+    p {
+      font-size:1.1rem;
+    }
+
+    button {
+      width: 50%;
+      height: 13%;
+      border: 1px solid #222;
+      background-color: $green;
+      color:$ivory;
+      font-size: 1.1rem;
+      margin-top: 20px;
+
+      &:active {
+        transform: scale(0.8);
+        transition: all 0.5s ease-in-out;
+      }
     }
   }
 }

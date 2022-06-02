@@ -2,7 +2,7 @@ import React from "react";
 import "./assets/scss/common.scss";
 import "./assets/scss/menu.scss";
 
-import { NavLink } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,6 +17,7 @@ import AboutMe from "./pages/AboutMe";
 import Skill from "./pages/Skill";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
+
 
 const App = () => {
   return (
