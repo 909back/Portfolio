@@ -4,8 +4,7 @@ import config from "../../_config.json";
 import Arrow48 from "../assets/img/arrow48.png";
 
 const ProjectItem = ({ data, Image, styleName }) => {
- console.log(data);
-
+  
   return (
     <div className={style.wrapper}>
       <section className={[style.slide,styleName || null].join(" ")}>
