@@ -5,6 +5,7 @@ import style from "../assets/scss/Contact.module.scss";
 import Modal from "../components/Modal";
 import RegexHelper from "../util/Regex";
 
+
 const Contact = () => {
   const Form = React.useRef();
   const [open, setOpen] = React.useState(false);

@@ -1,4 +1,4 @@
-class RegexHelper{
+export default class RegexHelper {
 
     value(selector, msg){
         const field = document.getElementById(selector);
@@ -57,5 +57,4 @@ class RegexHelper{
     }
 }
 
-export default RegexHelper;
 
