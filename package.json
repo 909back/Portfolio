@@ -21,7 +21,8 @@
     "react-typewriter-effect": "^1.1.0",
     "sass": "^1.50.1",
     "styled-components": "^5.3.5",
-    "swiper": "^8.1.5"
+    "swiper": "^8.1.5",
+    "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

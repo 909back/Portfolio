@@ -9,14 +9,14 @@ import github from "../assets/img/github.png";
 import githubLight from "../assets/img/github-light.png";
 import email from "../assets/img/email.png";
 import emailLight from "../assets/img/email-light.png";
-import TypeWriterEffect from "react-typewriter-effect";
+import TypeWriterEffect from "react-typewriter-effect/dist";
+
+import Typewriter from "typewriter-effect";
 
 const AboutMe = () => {
   const Stars = React.useRef([]);
   const [content, setContent] = React.useState([]);
   const [position, setPosition] = React.useState({ X: 0, Y: 0 });
-
-  const TypeWriter = TypeWriterEffect;
 
   const onMouseMove = (event) => {
     setPosition({
@@ -35,15 +35,21 @@ const AboutMe = () => {
     mx += (position.X - mx) * speed;
     my += (position.Y - my) * speed;
 
-    Stars.current[0].style.transform = `translate(${mx/2}px,${my/2}px) perspective(300px) translateZ(${(10*my)/3}px)`;
-    Stars.current[1].style.transform = `translate(${mx/2}px,${my/2}px) perspective(300px) translateZ(${(10*my)/3}px)`;
+    Stars.current[0].style.transform = `translate(${mx / 2}px,${
+      my / 2
+    }px) perspective(300px) translateZ(${(10 * my) / 3}px)`;
+    Stars.current[1].style.transform = `translate(${mx / 2}px,${
+      my / 2
+    }px) perspective(300px) translateZ(${(10 * my) / 3}px)`;
 
     window.requestAnimationFrame(loop);
   };
 
-  const Text = `${String.fromCharCode(8618)} ${String.fromCharCode(91)} system ${String.fromCharCode(93)} 안녕하세요${String.fromCharCode(46)} 프론트엔드 개발자 백은지라고 합니다${String.fromCharCode(46)}`.toString();
-
-  const myRef = document.querySelector(".type-area");
+  const Text = `${String.fromCharCode(8618)} ${String.fromCharCode(
+    91
+  )} system ${String.fromCharCode(93)} 안녕하세요${String.fromCharCode(
+    46
+  )} 프론트엔드 개발자 백은지라고 합니다${String.fromCharCode(46)}`.toString();
 
   return (
     <>
@@ -86,12 +92,12 @@ const AboutMe = () => {
           </div>
           <div className={style.greeting}>
             <div className="type-area">
-              <TypeWriter
-                startDelay={200}
-                cursorColor="#222"
-                text={Text}
-                typeSpeed={100}
-                scrollArea={myRef}
+              <Typewriter
+                options={{
+                  strings: [Text],
+                  autoStart: true,
+                  loop: true,
+                }}
               />
             </div>
           </div>
