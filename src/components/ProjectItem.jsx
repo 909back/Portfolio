@@ -1,10 +1,9 @@
 import React from "react";
 import style from "../assets/scss/Project.module.scss";
-import config from "../../_config.json";
 import Arrow48 from "../assets/img/arrow48.png";
 
 const ProjectItem = ({ data, Image, styleName }) => {
-  
+
   return (
     <div className={style.wrapper}>
       <section className={[style.slide,styleName || null].join(" ")}>

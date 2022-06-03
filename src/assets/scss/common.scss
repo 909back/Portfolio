@@ -1,29 +1,16 @@
 @font-face {
   font-family: Inter;
-  src: url(../fonts/Inter/Inter-VariableFont_slnt\wght.ttf);
-}
-
-@font-face {
-  font-family: Homemade;
-  src: url(../fonts/Homemade_Apple/HomemadeApple-Regular.ttf);
+  src: url('../fonts/Inter/Inter-VariableFont_slnt\wght.ttf');
 }
 
 @font-face {
   font-family: NotoSans;
-  src: url(../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf);
+  src: url('../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf');
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-// font-family: 'Bebas Neue', cursive;
-
-//@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-// font-family: 'Shrikhand', cursive;
 
 @font-face {
   font-family:Shrikhand; 
-  src: url(../fonts/Shrikhand/Shrikhand-Regular.ttf);
+  src: url('../fonts/Shrikhand/Shrikhand-Regular.ttf');
 }
 
 $basic_border: 2px solid #222;

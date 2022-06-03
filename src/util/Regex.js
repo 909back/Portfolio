@@ -1,5 +1,5 @@
 export default class RegexHelper {
-
+    
     value(selector, msg){
         const field = document.getElementById(selector);
         const value = field.value.trim();

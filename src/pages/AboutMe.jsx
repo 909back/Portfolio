@@ -16,6 +16,8 @@ const AboutMe = () => {
   const [content, setContent] = React.useState([]);
   const [position, setPosition] = React.useState({ X: 0, Y: 0 });
 
+  const TypeWriter = TypeWriterEffect;
+
   const onMouseMove = (event) => {
     setPosition({
       X: event.clientX - event.currentTarget.style.width,
@@ -33,15 +35,15 @@ const AboutMe = () => {
     mx += (position.X - mx) * speed;
     my += (position.Y - my) * speed;
 
-    Stars.current[0].style.transform = `translate(${mx / 2}px,${
-      my / 2
-    }px) perspective(300px) translateZ(${(10 * my) / 3}px)`;
-    Stars.current[1].style.transform = `translate(${mx / 2}px,${
-      my / 2
-    }px) perspective(300px) translateZ(${(10 * my) / 3}px)`;
+    Stars.current[0].style.transform = `translate(${mx/2}px,${my/2}px) perspective(300px) translateZ(${(10*my)/3}px)`;
+    Stars.current[1].style.transform = `translate(${mx/2}px,${my/2}px) perspective(300px) translateZ(${(10*my)/3}px)`;
 
     window.requestAnimationFrame(loop);
   };
+
+  const Text = `${String.fromCharCode(8618)} ${String.fromCharCode(91)} system ${String.fromCharCode(93)} 안녕하세요${String.fromCharCode(46)} 프론트엔드 개발자 백은지라고 합니다${String.fromCharCode(46)}`.toString();
+
+  const myRef = document.querySelector(".type-area");
 
   return (
     <>
@@ -61,7 +63,21 @@ const AboutMe = () => {
         <header className={style.header}>
           <div className={style.logo}>
             <div className={style.background}>
-         <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
             <h1>
               <p>909</p>
@@ -69,12 +85,13 @@ const AboutMe = () => {
             </h1>
           </div>
           <div className={style.greeting}>
-            <div className={style.greetingWrapper}>
-              <TypeWriterEffect
+            <div className="type-area">
+              <TypeWriter
                 startDelay={200}
-                cursorColor="black"
-                text="&#8618; &#91; system &#93; 안녕하세요. 프론트엔드 개발자 백은지라고 합니다."
+                cursorColor="#222"
+                text={Text}
                 typeSpeed={100}
+                scrollArea={myRef}
               />
             </div>
           </div>
@@ -87,19 +104,25 @@ const AboutMe = () => {
           <div className={style.introduce}>
             <h2>ABOUT ME</h2>
             <div>
-              <p>안녕하세요. 신입 프론트엔드 개발자 <strong>백은지</strong>라고합니다.</p>
               <p>
-                IT 서비스 회사에서 재직하던 중 HTML5, CSS3, JS 수업을 들으며 프론트엔드 개발자의
-                꿈을 키우게 되었습니다.
+                안녕하세요. 신입 프론트엔드 개발자 <strong>백은지</strong>
+                라고합니다.
               </p>
-              <p>6개월동안 풀스택 개발자 수업을 들으면서 프론트 뿐만 아니라 백엔드에도 관심을 가지고 공부하고 있습니다.</p>
+              <p>
+                IT 서비스 회사에서 재직하던 중 HTML5, CSS3, JS 수업을 들으며
+                프론트엔드 개발자의 꿈을 키우게 되었습니다.
+              </p>
+              <p>
+                6개월동안 풀스택 개발자 수업을 들으면서 프론트 뿐만 아니라
+                백엔드에도 관심을 가지고 공부하고 있습니다.
+              </p>
               <ul>
                 <li>사용자를 즐겁게하는 창의적인 작업을 즐깁니다.</li>
-                <li>새로운 것을 알아가는 것을 좋아히고 언제나 배우려는 자세를 가지고 있습니다.
-                </li>
                 <li>
-                  항상 긍정적인 자세로 문제를 해결하고자 합니다.
+                  새로운 것을 알아가는 것을 좋아히고 언제나 배우려는 자세를
+                  가지고 있습니다.
                 </li>
+                <li>항상 긍정적인 자세로 문제를 해결하고자 합니다.</li>
               </ul>
             </div>
             <div className={style.sns}>
