@@ -42,6 +42,29 @@ $othergreen: #4C7A62;
 
 
 
+@mixin mobile-icons-align () {
+  background-color: #000;
+  text-align: center;
+
+  &:hover {
+    background-color: #fff;
+    border: 2px solid #000;
+    box-sizing: border-box;
+  }
+
+  &:hover img {
+    transform: translate(0, -58px);
+  }
+
+  img {
+    margin: 7.5px 0;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+
 @keyframes sparkleAni {
   0% {
     transform: scale(1);
@@ -574,7 +597,7 @@ section {
           -webkit-text-stroke: 1px #000;
           position: relative;
           z-index: 98;
-          font-size: 1.8rem;
+          font-size: 1.5rem;
   
           p:nth-child(1){
             position: relative;
@@ -594,7 +617,7 @@ section {
         width: 100%;
         height: calc($header_height / 2);
         line-height: calc($header_height / 2);
-        text-indent: 20px;
+        text-indent: 10px;
         overflow: hidden;
         text-align: center;
   
@@ -638,52 +661,53 @@ section {
         height: 43vh;
         border-top: $basic_border;
         line-height: 1.5rem;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
   
         h2 {
-          font-size: 1.5rem;
+          font-size: 1.7rem;
           width: 150px;
           line-height: 1.8rem;
           letter-spacing: 1px;
-          margin: 15px auto;
+          margin: 10px auto;
           text-align: center;
         }
   
         p {
-          width: 90%;
-          margin: 5px auto;
+          width: 95%;
+          margin: 3px auto;
           text-align: center;
   
           &:first-child{
             width:fit-content;
             background-color:$yellow;
             color:$maroon; 
-            font-size: 0.9rem;
+            font-size: 0.8rem;
           }
         }
   
         ul {
-          width: 60%;
+          width: 70%;
           height: auto;
-          margin: 20px auto 10px auto;
+          margin: 5px auto 0px auto;
   
           li {
             width: 100%;
             height: auto;
-            margin: 10px 0;
+            margin: 3px 0;
           }
         }
-  
+        
+        $mobile_sns_height: 30px;
         .sns {
           width: 100%;
-          height: 40px;
-          margin-top: 20px;
+          height: $mobile_sns_height;
+          margin-top: 5px;
           display: flex;
           align-items: center;
           justify-content: center;
   
           .icons {
-            width: 40px;
+            width: 30px;
             height: 100%;
             margin-right: 10px;
             border-radius: 5px;
@@ -698,14 +722,14 @@ section {
             &.velog:hover img {
               width: 105%;
               height: 105%;
-              transform: translate(-1px, -55px);
+              transform: translate(-1px, -40px);
             }
   
             a {
               width: 100%;
               height: 100%;
               display: block;
-              line-height: 40px;
+              line-height: $mobile_sns_height;
   
               img {
                 width: 100%;
@@ -715,11 +739,45 @@ section {
             }
   
             &.github {
-              @include icons-align();
+              background-color: #000;
+              text-align: center;
+            
+              &:hover {
+                background-color: #fff;
+                border: 2px solid #000;
+                box-sizing: border-box;
+              }
+            
+              &:hover img {
+                transform: translate(0, -44px);
+              }
+            
+              img {
+                margin: 5px 0;
+                width: 20px;
+                height: 20px;
+              }
             }
   
             &.email {
-              @include icons-align();
+              background-color: #000;
+              text-align: center;
+            
+              &:hover {
+                background-color: #fff;
+                border: 2px solid #000;
+                box-sizing: border-box;
+              }
+            
+              &:hover img {
+                transform: translate(0, -44px);
+              }
+            
+              img {
+                margin: 5px 0;
+                width: 20px;
+                height: 20px;
+              }
             }
           }
         }
