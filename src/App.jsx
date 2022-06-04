@@ -20,14 +20,7 @@ import Contact from "./pages/Contact";
 
 
 const App = () => {
-  
-    window.addEventListener('resize',()=>{
-      // 현재 1vh를 구한다.
-      let vh = window.innerHeight * 0.01;
-    
-      // html 요소중 속성이 '--vh'로 지정된 속성을 1vh * 100으로 변경해라
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
+
 
   return (
     <>
