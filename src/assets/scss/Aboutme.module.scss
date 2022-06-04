@@ -439,6 +439,8 @@ section {
         border-top: $basic_border;
         line-height: 1.5rem;
         font-size: 1.08rem;
+        margin: 5px auto;
+   
   
         h2 {
           font-size: 1.9rem;
@@ -460,16 +462,20 @@ section {
             font-size: 1.2rem;
           }
         }
-  
-        ul {
-          width: 60%;
-          height: auto;
-          margin: 30px auto 10px auto;
-  
-          li {
-            width: 100%;
-            height: 30px;
-            margin: 5px 0;
+
+        & > div {
+          margin: 10px auto;
+          
+          ul {
+            width: 60%;
+            height: auto;
+            margin: 30px auto 10px auto;
+            
+            li {
+              width: 100%;
+              height: 30px;
+              margin: 5px 0;
+            }
           }
         }
   
