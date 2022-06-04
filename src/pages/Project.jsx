@@ -2,10 +2,10 @@ import React from "react";
 import style from "../assets/scss/Project.module.scss";
 import ProjectItem from "../components/ProjectItem";
 import config from '../util/_config.json';
-import Dangoon from "../assets/img/dangoon2.png";
-import Starbucks from '../assets/img/starbucks.png';
-import Baskin from '../assets/img/baskin.png';
-import Portfolio from '../assets/img/portfolio.png';
+import Dangoon from "../assets/img/dangoon2.webp";
+import Starbucks from '../assets/img/starbucks.webp';
+import Baskin from '../assets/img/baskin.webp';
+import Portfolio from '../assets/img/portfolio.webp';
 
 
 import { Navigation } from "swiper";

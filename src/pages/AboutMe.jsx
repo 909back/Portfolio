@@ -1,6 +1,6 @@
 import React from "react";
 import style from "../assets/scss/Aboutme.module.scss";
-import myImage from "../assets/img/me2.jpeg";
+import myImage from "../assets/img/me2.webp";
 import Sparkle1 from "../assets/img/Sparkle1.png";
 import Sparkle2 from "../assets/img/Sparkle2.png";
 import velog from "../assets/img/velog.svg";
