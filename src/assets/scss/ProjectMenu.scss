@@ -1,3 +1,5 @@
+@import "responsive";
+
 @mixin item {
     font-size: 1.2rem;
     font-weight: 600;
@@ -15,40 +17,126 @@
 $ivory: #f6f4f2;
 $green : #31422e;
 
-.swiper-button-prev {
-    position: absolute;
-    top: 81vh !important;
-    left: 47% !important;
-    width: 40px !important;
-    height: 40px !important;
-    --swiper-navigation-size: 20px;
-    background-color: $ivory;
-    border: 2px solid #222;
-    border-radius: 50%;
-    transform: translate(-47%, 0);
 
-    &::after {
-        position: relative;
-        left: -1px;
-        color: $green;
+@include desktop {
+    .swiper-button-prev {
+        position: absolute;
+        top: 81vh !important;
+        left: 47% !important;
+        width: 40px !important;
+        height: 40px !important;
+        --swiper-navigation-size: 20px;
+        background-color: $ivory;
+        border: 2px solid #222;
+        border-radius: 50%;
+        transform: translate(-47%, 0);
+    
+        &::after {
+            position: relative;
+            left: -1px;
+            color: $green;
+        }
+    }
+    
+    .swiper-button-next {
+        position: absolute;
+        top: 81vh !important;
+        left: 53% !important;
+        width: 40px !important;
+        height: 40px !important;
+        --swiper-navigation-size: 20px;
+        background-color: ivory;
+        border: 2px solid #222;
+        border-radius: 50%;
+        transform: translate(-53%, 0);
+    
+        &::after {
+            position: relative;
+            right: -1px;
+            color: $green;
+        }
     }
 }
 
-.swiper-button-next {
-    position: absolute;
-    top: 81vh !important;
-    left: 53% !important;
-    width: 40px !important;
-    height: 40px !important;
-    --swiper-navigation-size: 20px;
-    background-color: ivory;
-    border: 2px solid #222;
-    border-radius: 50%;
-    transform: translate(-53%, 0);
-
-    &::after {
-        position: relative;
-        right: -1px;
-        color: $green;
+@include tablet {
+    .swiper-button-prev {
+        position: absolute;
+        top: 86vh !important;
+        left: 40% !important;
+        width: 40px !important;
+        height: 40px !important;
+        --swiper-navigation-size: 20px;
+        background-color: $ivory;
+        border: 2px solid #222;
+        border-radius: 50%;
+        transform: translate(-47%, 0);
+    
+        &::after {
+            position: relative;
+            left: -1px;
+            color: $green;
+        }
+    }
+    
+    .swiper-button-next {
+        position: absolute;
+        top: 86vh !important;
+        left: 60% !important;
+        width: 40px !important;
+        height: 40px !important;
+        --swiper-navigation-size: 20px;
+        background-color: ivory;
+        border: 2px solid #222;
+        border-radius: 50%;
+        transform: translate(-53%, 0);
+    
+        &::after {
+            position: relative;
+            right: -1px;
+            color: $green;
+        }
     }
 }
+
+@include mobile {
+    .swiper-button-prev {
+        position: absolute;
+        top: 86vh !important;
+        left: 40% !important;
+        width: 40px !important;
+        height: 40px !important;
+        --swiper-navigation-size: 20px;
+        background-color: $ivory;
+        border: 2px solid #222;
+        border-radius: 50%;
+        transform: translate(-47%, 0);
+    
+        &::after {
+            position: relative;
+            left: -1px;
+            color: $green;
+        }
+    }
+    
+    .swiper-button-next {
+        position: absolute;
+        top: 86vh !important;
+        left: 60% !important;
+        width: 40px !important;
+        height: 40px !important;
+        --swiper-navigation-size: 20px;
+        background-color: ivory;
+        border: 2px solid #222;
+        border-radius: 50%;
+        transform: translate(-53%, 0);
+    
+        &::after {
+            position: relative;
+            right: -1px;
+            color: $green;
+        }
+    }
+}
+
+
+

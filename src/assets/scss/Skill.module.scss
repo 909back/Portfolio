@@ -1,3 +1,5 @@
+@import 'responsive';
+
 $header_height: 100px;
 $basic_border: 2px solid #222;
 $basic_color: #8db4ad;
@@ -17,269 +19,801 @@ $maroon: #49403b;
   align-items: center;
 }
 
+@mixin first-cols {
+  border-right: $basic_border;
+}
+
 $width: calc(39vw + 62px);
 
 .page {
   display: flex;
 
-  .container {
-    flex-basis: $width;
-    flex-shrink: 0;
-    width: $width;
-    height: calc(100vh - 40px);
-    border-right: $basic_border;
-    position: relative;
-
-    &:nth-child(2) {
-      background-color: $green;
-
-      .title {
-        background-color: $ivory !important;
-        color: #000 !important;
-      }
-    }
-
-    .skillHeader {
-      width: 70%;
-      height: $header_height;
-      border: $basic_border;
-      border-radius: 50%;
-      line-height: $header_height - 1px;
-      text-align: center;
-      margin: 20px auto;
-      box-sizing: border-box;
-
-      &.frontend {
-        background-color: $green;
-        color: $yellow;
-      }
-
-      &.backend {
-        color: $yellow;
-        background-color: $ivory;
-
-        h2 {
-          -webkit-text-stroke: 1px $maroon;
-        }
-      }
-
-      h2 {
-        font-size: 2.2rem;
-        font-family: "Shrikhand", cursive;
-        -webkit-text-stroke: 1px $maroon;
-        letter-spacing: 2px;
-      }
-    }
-
-    @mixin first-cols {
+  @include desktop {
+    .container {
+      flex-basis: $width;
+      flex-shrink: 0;
+      width: $width;
+      height: calc(100vh - 40px);
       border-right: $basic_border;
-    }
-
-    .skillList {
-      width: 92%;
-      height: calc(100% - 140px);
-      scrollbar-width: 5px;
-      scroll-behavior: smooth;
-      background: $ivory;
-      display: grid;
-      margin: auto;
-      border-left: $basic_border;
-      border-right: $basic_border;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 33vh 11vh 33vh;
-      grid-template-areas:
-        "first second"
-        "third second"
-        "third  four";
-
-      .skill {
-        list-style: none;
-        background-color: $ivory;
-        position: relative;
-        overflow: hidden;
-        border-top: $basic_border;
-
-        &.html {
-          grid-area: first;
-          @include first-cols();
-          svg {
-            fill: #e34f26;
-          }
-        }
-
-        &.css {
-          grid-area: second;
-          svg {
-            fill: #1572b6;
-          }
-        }
-
-        &.js {
-          grid-area: third;
-          @include first-cols();
-          svg {
-            fill: #f7df1e;
-          }
-        }
-
-        &.react {
-          grid-area: four;
-          svg {
-            fill: #61dafb;
-          }
-        }
-
-        &.node {
-          grid-area: first;
-          @include first-cols();
-          svg {
-            fill: #339933;
-          }
-        }
-
-        &.mysql {
-          grid-area: second;
-          svg {
-            fill: #4479a1;
-          }
-        }
-
-        &.next {
-          grid-area: third;
-          @include first-cols();
-          svg {
-            fill: #000;
-          }
-        }
-
-        &.graphql {
-          grid-area: four;
-          svg {
-            fill: #e10098;
-          }
-        }
-
-        .title {
-          width: 100%;
-          height: 40px;
-          border-bottom: $basic_border;
-          font-size: 1.3rem;
-          font-weight: 700;
-          line-height: 40px;
-          text-align: center;
-          // background-color: $othergreen;
-          // color:$ivory;
-        }
-
-        &:hover .skillDetail {
-          transform: translate(0, -100%);
-        }
-
-        .icon {
-          width: 100%;
-          height: calc(100% - 40px);
-          @include item-center;
-
-          svg {
-            width: 130px;
-            height: auto;
-          }
-        }
-      }
-    }
-  }
-
-  .hide {
-    width: 70px;
-    height: 90px;
-    padding-top: 10px;
-    border: $basic_border;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    z-index: 99;
-    cursor: pointer;
-    background-color: $ivory;
-    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-
-    .head {
-      height: 100%;
-      width: 100%;
-      letter-spacing: 1px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      transition: inherit;
-      text-align: center;
-      line-height: 1.6rem;
-
-      img {
-        width: 38px;
-        height: 38px;
-        transform: rotate(90deg);
-      }
-    }
-
-    .content {
-      opacity: 0;
-      height: 0;
-      display: none;
+      position: relative;
   
-      .levelM {
-        opacity: 0;
-        display: none;
+      &:nth-child(2) {
+        background-color: $green;
+  
+        .title {
+          background-color: $ivory !important;
+          color: #000 !important;
+        }
+      }
+  
+      .skillHeader {
+        width: 70%;
+        height: $header_height;
+        border: $basic_border;
+        border-radius: 50%;
+        line-height: $header_height - 1px;
+        text-align: center;
+        margin: 20px auto;
+        box-sizing: border-box;
+  
+        &.frontend {
+          background-color: $green;
+          color: $yellow;
+        }
+  
+        &.backend {
+          color: $yellow;
+          background-color: $ivory;
+  
+          h2 {
+            -webkit-text-stroke: 1px $maroon;
           }
+        }
+  
+        h2 {
+          font-size: 2.2rem;
+          font-family: "Shrikhand", cursive;
+          -webkit-text-stroke: 1px $maroon;
+          letter-spacing: 2px;
+        }
+      }
 
-      .levelL {
-        opacity: 0;
-        display: none;
+  
+      .skillList {
+        width: 92%;
+        height: calc(100% - 140px);
+        scrollbar-width: 5px;
+        scroll-behavior: smooth;
+        background: $ivory;
+        display: grid;
+        margin: auto;
+        border-left: $basic_border;
+        border-right: $basic_border;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 33vh 11vh 33vh;
+        grid-template-areas:
+          "first second"
+          "third second"
+          "third  four";
+  
+        .skill {
+          list-style: none;
+          background-color: $ivory;
+          position: relative;
+          overflow: hidden;
+          border-top: $basic_border;
+  
+          &.html {
+            grid-area: first;
+            @include first-cols();
+            svg {
+              fill: #e34f26;
+            }
           }
+  
+          &.css {
+            grid-area: second;
+            svg {
+              fill: #1572b6;
+            }
+          }
+  
+          &.js {
+            grid-area: third;
+            @include first-cols();
+            svg {
+              fill: #f7df1e;
+            }
+          }
+  
+          &.react {
+            grid-area: four;
+            svg {
+              fill: #61dafb;
+            }
+          }
+  
+          &.node {
+            grid-area: first;
+            @include first-cols();
+            svg {
+              fill: #339933;
+            }
+          }
+  
+          &.mysql {
+            grid-area: second;
+            svg {
+              fill: #4479a1;
+            }
+          }
+  
+          &.next {
+            grid-area: third;
+            @include first-cols();
+            svg {
+              fill: #000;
+            }
+          }
+  
+          &.graphql {
+            grid-area: four;
+            svg {
+              fill: #e10098;
+            }
+          }
+  
+          .title {
+            width: 100%;
+            height: 40px;
+            border-bottom: $basic_border;
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 40px;
+            text-align: center;
+            // background-color: $othergreen;
+            // color:$ivory;
+          }
+  
+          &:hover .skillDetail {
+            transform: translate(0, -100%);
+          }
+  
+          .icon {
+            width: 100%;
+            height: calc(100% - 40px);
+            @include item-center;
+  
+            svg {
+              width: 130px;
+              height: auto;
+            }
+          }
+        }
+      }
     }
-  }
-
-  .desc {
-    width: 50%;
-    height: 50%;
-    border: $basic_border;
-    z-index: 98;
-    background-color: $ivory;
+  
+    .hide {
+      width: 70px;
+      height: 90px;
+      padding-top: 10px;
+      border: $basic_border;
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      z-index: 99;
+      cursor: pointer;
+      background-color: $ivory;
+      transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  
+      .head {
+        height: 100%;
+        width: 100%;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: inherit;
+        text-align: center;
+        line-height: 1.6rem;
+  
+        img {
+          width: 38px;
+          height: 38px;
+          transform: rotate(90deg);
+        }
+      }
+  
+      .content {
+        opacity: 0;
+        height: 0;
+        display: none;
     
-
-    .head {
-      width: 100%;
-      height: 15%;
-      border-bottom: $basic_border;
-      letter-spacing: 1px;
-      font-size: 1.3rem;
-      font-weight: 600;
-      @include item-center;
-      gap: 5px;
-    }
-
-    .content {
-      width: 100%;
-      height: 85%;
-      display: block;
-      opacity: 1;
-
-      .levelM {
-        width: 100%;
-        height: 50%;
-        text-align: center;
-        font-size: 0.8rem;
-        @include item-center;
-        opacity: 1;
-        flex-flow: column nowrap;
+        .levelM {
+          opacity: 0;
+          display: none;
+            }
+  
+        .levelL {
+          opacity: 0;
+          display: none;
+            }
       }
-
-      .levelL {
+    }
+  
+    .desc {
+      width: 50%;
+      height: 50%;
+      border: $basic_border;
+      z-index: 98;
+      background-color: $ivory;
+      
+  
+      .head {
         width: 100%;
-        height: 50%;
-        text-align: center;
-        font-size: 0.8rem;
+        height: 15%;
+        border-bottom: $basic_border;
+        letter-spacing: 1px;
+        font-size: 1.3rem;
+        font-weight: 600;
         @include item-center;
-        flex-flow: column nowrap;
+        gap: 5px;
+      }
+  
+      .content {
+        width: 100%;
+        height: 85%;
+        display: block;
         opacity: 1;
+  
+        .levelM {
+          width: 100%;
+          height: 50%;
+          text-align: center;
+          font-size: 0.8rem;
+          @include item-center;
+          opacity: 1;
+          flex-flow: column nowrap;
+        }
+  
+        .levelL {
+          width: 100%;
+          height: 50%;
+          text-align: center;
+          font-size: 0.8rem;
+          @include item-center;
+          flex-flow: column nowrap;
+          opacity: 1;
+        }
       }
     }
   }
+
+  @include tablet {
+    flex-flow: column nowrap;
+    justify-content:center;
+    gap: 10px;
+
+    .container {
+      flex-basis: 40vh;
+      flex-shrink: 0;
+      width: 90%;
+      height: 46vh;
+      margin: 0 auto;
+      border: $basic_border;
+      position: relative;
+  
+      &:nth-child(2) {
+        background-color: $green;
+  
+        .title {
+          background-color: $ivory !important;
+          color: #000 !important;
+        }
+      }
+  
+      .skillHeader {
+        width: 50%;
+        height: $header_height - 10px;
+        border: $basic_border;
+        border-radius: 50%;
+        line-height: $header_height - 10px;
+        text-align: center;
+        margin: 20px auto;
+        box-sizing: border-box;
+  
+        &.frontend {
+          background-color: $green;
+          color: $yellow;
+        }
+  
+        &.backend {
+          color: $yellow;
+          background-color: $ivory;
+  
+          h2 {
+            -webkit-text-stroke: 1px $maroon;
+          }
+        }
+  
+        h2 {
+          font-size: 2.2rem;
+          font-family: "Shrikhand", cursive;
+          -webkit-text-stroke: 1px $maroon;
+          letter-spacing: 2px;
+        }
+      }
+  
+
+  
+      .skillList {
+        width: 92%;
+        height: calc(40vh - 160px);
+        scrollbar-width: 5px;
+        scroll-behavior: smooth;
+        background: $ivory;
+        display: grid;
+        margin: auto;
+        border: $basic_border;
+        border-top:0;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+          "first second third  four";
+  
+        .skill {
+          list-style: none;
+          background-color: $ivory;
+          position: relative;
+          overflow: hidden;
+          border-right: $basic_border;
+          border-top: $basic_border;
+  
+          &.html {
+            grid-area: first;
+            svg {
+              fill: #e34f26;
+            }
+          }
+  
+          &.css {
+            grid-area: second;
+            svg {
+              fill: #1572b6;
+            }
+          }
+  
+          &.js {
+            grid-area: third;
+            svg {
+              fill: #f7df1e;
+            }
+          }
+  
+          &.react {
+            grid-area: four;
+            border-right:0;
+            svg {
+              fill: #61dafb;
+            }
+          }
+  
+          &.node {
+            grid-area: first;
+            svg {
+              fill: #339933;
+            }
+          }
+  
+          &.mysql {
+            grid-area: second;
+            svg {
+              fill: #4479a1;
+            }
+          }
+  
+          &.next {
+            grid-area: third;
+            svg {
+              fill: #000;
+            }
+          }
+  
+          &.graphql {
+            grid-area: four;
+            border-right:0;
+            svg {
+              fill: #e10098;
+            }
+          }
+  
+          .title {
+            width: 100%;
+            height: 40px;
+            border-bottom: $basic_border;
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 40px;
+            text-align: center;
+            // background-color: $othergreen;
+            // color:$ivory;
+          }
+  
+          &:hover .skillDetail {
+            transform: translate(0, -100%);
+          }
+  
+          .icon {
+            width: 100%;
+            height: calc(100% - 40px);
+            @include item-center;
+  
+            svg {
+              width: 90px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  
+    .hide {
+      width: 70px;
+      height: 90px;
+      padding-top: 10px;
+      border: $basic_border;
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      z-index: 99;
+      cursor: pointer;
+      background-color: $ivory;
+      transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  
+      .head {
+        height: 100%;
+        width: 100%;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: inherit;
+        text-align: center;
+        line-height: 1.6rem;
+  
+        img {
+          width: 38px;
+          height: 38px;
+          transform: rotate(90deg);
+        }
+      }
+  
+      .content {
+        opacity: 0;
+        height: 0;
+        display: none;
+    
+        .levelM {
+          opacity: 0;
+          display: none;
+            }
+  
+        .levelL {
+          opacity: 0;
+          display: none;
+            }
+      }
+    }
+  
+    .desc {
+      width: 50%;
+      height: 50%;
+      border: $basic_border;
+      z-index: 98;
+      background-color: $ivory;
+      
+  
+      .head {
+        width: 100%;
+        height: 15%;
+        border-bottom: $basic_border;
+        letter-spacing: 1px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        @include item-center;
+        gap: 5px;
+      }
+  
+      .content {
+        width: 100%;
+        height: 85%;
+        display: block;
+        opacity: 1;
+  
+        .levelM {
+          width: 100%;
+          height: 50%;
+          text-align: center;
+          font-size: 0.8rem;
+          @include item-center;
+          opacity: 1;
+          flex-flow: column nowrap;
+        }
+  
+        .levelL {
+          width: 100%;
+          height: 50%;
+          text-align: center;
+          font-size: 0.8rem;
+          @include item-center;
+          flex-flow: column nowrap;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    flex-flow: column nowrap;
+    justify-content:center;
+    gap: 10px;
+
+    .container {
+      flex-basis: 45vh;
+      flex-shrink: 0;
+      width: 90%;
+      height: 46vh;
+      margin: 0 auto;
+      border: $basic_border;
+      position: relative;
+  
+      &:nth-child(2) {
+        background-color: $green;
+  
+        .title {
+          background-color: $ivory !important;
+          color: #000 !important;
+        }
+      }
+  
+      .skillHeader {
+        width: 60%;
+        height: $header_height - 10px;
+        border: $basic_border;
+        border-radius: 50%;
+        line-height: $header_height - 10px;
+        text-align: center;
+        margin: 10px auto;
+        box-sizing: border-box;
+  
+        &.frontend {
+          background-color: $green;
+          color: $yellow;
+        }
+  
+        &.backend {
+          color: $yellow;
+          background-color: $ivory;
+  
+          h2 {
+            -webkit-text-stroke: 1px $maroon;
+          }
+        }
+  
+        h2 {
+          font-size: 1.8rem;
+          font-family: "Shrikhand", cursive;
+          -webkit-text-stroke: 1px $maroon;
+          letter-spacing: 2px;
+        }
+      }
+  
+
+  
+      .skillList {
+        width: 92%;
+        height: calc(45vh - 120px);
+        scrollbar-width: 5px;
+        scroll-behavior: smooth;
+        background: $ivory;
+        display: grid;
+        margin: auto;
+        border: $basic_border;
+        border-top:0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          "first second "
+          "third  four";
+  
+        .skill {
+          list-style: none;
+          background-color: $ivory;
+          position: relative;
+          overflow: hidden;
+          border-top: $basic_border;
+  
+          &.html {
+            border-right: $basic_border;
+            grid-area: first;
+            svg {
+              fill: #e34f26;
+            }
+          }
+  
+          &.css {
+            grid-area: second;
+            svg {
+              fill: #1572b6;
+            }
+          }
+  
+          &.js {
+            border-right: $basic_border;
+            grid-area: third;
+            svg {
+              fill: #f7df1e;
+            }
+          }
+  
+          &.react {
+            grid-area: four;
+            border-right:0;
+            svg {
+              fill: #61dafb;
+            }
+          }
+  
+          &.node {
+            border-right: $basic_border;
+            grid-area: first;
+            svg {
+              fill: #339933;
+            }
+          }
+  
+          &.mysql {
+            grid-area: second;
+            svg {
+              fill: #4479a1;
+            }
+          }
+  
+          &.next {
+            border-right: $basic_border;
+            grid-area: third;
+            svg {
+              fill: #000;
+            }
+          }
+  
+          &.graphql {
+            grid-area: four;
+            border-right:0;
+            svg {
+              fill: #e10098;
+            }
+          }
+  
+          .title {
+            width: 100%;
+            height: 40px;
+            border-bottom: $basic_border;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 40px;
+            text-align: center;
+            // background-color: $othergreen;
+            // color:$ivory;
+          }
+  
+          &:hover .skillDetail {
+            transform: translate(0, -100%);
+          }
+  
+          .icon {
+            width: 100%;
+            height: calc(100% - 40px);
+            @include item-center;
+  
+            svg {
+              width: 60px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  
+    .hide {
+      width: 50px;
+      height: 70px;
+      padding-top: 5px;
+      border: $basic_border;
+      position: absolute;
+      top: 11px;
+      right: 15px;
+      z-index: 99;
+      cursor: pointer;
+      background-color: $ivory;
+      transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  
+      .head {
+        height: 100%;
+        width: 100%;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        transition: inherit;
+        text-align: center;
+        line-height: 1.3rem;
+  
+        img {
+          width: 25px;
+          height: 25px;
+          transform: rotate(90deg);
+        }
+      }
+  
+      .content {
+        opacity: 0;
+        height: 0;
+        display: none;
+    
+        .levelM {
+          opacity: 0;
+          display: none;
+            }
+  
+        .levelL {
+          opacity: 0;
+          display: none;
+            }
+      }
+    }
+  
+    .desc {
+      width: 50%;
+      height: 50%;
+      border: $basic_border;
+      z-index: 98;
+      background-color: $ivory;
+      
+  
+      .head {
+        width: 100%;
+        height: 15%;
+        border-bottom: $basic_border;
+        letter-spacing: 1px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        @include item-center;
+        gap: 5px;
+      }
+  
+      .content {
+        width: 100%;
+        height: 85%;
+        display: block;
+        opacity: 1;
+  
+        .levelM {
+          width: 100%;
+          height: 50%;
+          text-align: center;
+          font-size: 0.8rem;
+          @include item-center;
+          opacity: 1;
+          flex-flow: column nowrap;
+        }
+  
+        .levelL {
+          width: 100%;
+          height: 50%;
+          text-align: center;
+          font-size: 0.8rem;
+          @include item-center;
+          flex-flow: column nowrap;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
 }

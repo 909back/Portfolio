@@ -1,3 +1,5 @@
+@import "responsive";
+
 @mixin grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(calc(30vw + 62px), auto));
@@ -17,13 +19,13 @@
 
 $basic_border: 2px solid #222;
 
-$basic_color:#6B755C ;
+$basic_color: #6b755c;
 
 $ivory: #f6f4f2;
 $yellow: #ffd02c;
-$maroon : #49403B;
-$othergreen: #4C7A62;
-$green : #31422e;
+$maroon: #49403b;
+$othergreen: #4c7a62;
+$green: #31422e;
 
 @mixin projectItem($fontcolor) {
   .info {
@@ -32,21 +34,18 @@ $green : #31422e;
     }
   }
   li {
-
-    &:nth-child(3){ 
+    &:nth-child(3) {
       span {
-        background-color: $fontcolor !important;   
+        background-color: $fontcolor !important;
       }
     }
 
-    &:nth-child(4){ 
+    &:nth-child(4) {
       span {
-        background-color: $fontcolor !important;   
+        background-color: $fontcolor !important;
         opacity: 0.8;
       }
     }
-
-
   }
 
   a:before {
@@ -54,20 +53,24 @@ $green : #31422e;
   }
 }
 
-.head {
-  position: absolute;
-  left: 50%;
-  top: 6%;
-  font-size: 3rem;
-  letter-spacing: 1px;
-  transform: translate(-50%, 0);
-  font-family: "Shrikhand", cursive;
-  -webkit-text-stroke: 1px $maroon;
-  color: $ivory;
-  z-index: 99;
-}
-
 $width: calc(30vw + 62px);
+
+
+
+@include desktop {
+
+  .head {
+    position: absolute;
+    left: 50%;
+    top: 6%;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    transform: translate(-50%, 0);
+    font-family: "Shrikhand", cursive;
+    -webkit-text-stroke: 1px $maroon;
+    color: $ivory;
+    z-index: 99;
+  }
 
 .Swiper {
   background: $othergreen;
@@ -75,7 +78,7 @@ $width: calc(30vw + 62px);
   height: 100%;
   background-image: url(../img/pattern.png);
   background-repeat: repeat;
-  background-size:150px 150px;
+  background-size: 150px 150px;
 
   .wrapper {
     width: 100%;
@@ -90,7 +93,6 @@ $width: calc(30vw + 62px);
     margin: calc(20vh - 20px) auto;
     border: $basic_border;
     background-color: $ivory;
-
 
     &.starbucks {
       @include projectItem(#006241);
@@ -114,7 +116,6 @@ $width: calc(30vw + 62px);
         object-position: 50% 0;
         transform: scale(1.05);
 
-
         &:hover {
           transform: scale(1);
           transition: all 0.2s ease-in-out;
@@ -123,7 +124,7 @@ $width: calc(30vw + 62px);
     }
 
     .info {
-      height:100%;
+      height: 100%;
       grid-area: info;
       display: flex;
       flex-flow: column nowrap;
@@ -137,16 +138,15 @@ $width: calc(30vw + 62px);
           font-size: 2.5rem;
           text-align: center;
           color: $green;
-        } 
-      } 
+        }
+      }
 
       ul {
         flex: 0 1 fit-content;
         width: 100%;
         height: fit-content;
-        list-style: none; 
+        list-style: none;
         text-align: center;
-        
 
         li {
           // display: block;
@@ -184,7 +184,6 @@ $width: calc(30vw + 62px);
           &:first-child {
             margin-right: 30px;
           }
-  
 
           a {
             display: block;
@@ -224,3 +223,352 @@ $width: calc(30vw + 62px);
     }
   }
 }
+
+
+};
+
+@include tablet {
+
+  .head {
+    position: absolute;
+    left: 50%;
+    top: 4%;
+    font-size: 3.6rem;
+    letter-spacing: 1px;
+    transform: translate(-50%, 0);
+    font-family: "Shrikhand", cursive;
+    -webkit-text-stroke: 1px $maroon;
+    color: $ivory;
+    z-index: 99;
+  }
+
+.Swiper {
+  background: $othergreen;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/pattern.png);
+  background-repeat: repeat;
+  background-size: 150px 150px;
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    @include item-center;
+  }
+
+  .slide {
+    height: 70vh !important;
+    margin: calc(20vh - 20px) auto;
+    border: $basic_border;
+    background-color: $ivory;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "image" "info";
+
+    &.starbucks {
+      @include projectItem(#006241);
+    }
+    &.baskin {
+      @include projectItem(#0360b0);
+    }
+    &.dangoon {
+      @include projectItem(#ff9500);
+    }
+
+    .image {
+      grid-area: image;
+      border-bottom: $basic_border;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        transform: scale(1.05);
+
+        &:hover {
+          transform: scale(1);
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+
+    .info {
+      width: 100%;
+      grid-area: info;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      gap: 5px;
+
+      .title {
+        flex: 0 1 10%;
+        h2 {
+          font-family: "Shrikhand", cursive;
+          font-size: 2.5rem;
+          text-align: center;
+          color: $green;
+        }
+      }
+
+      ul {
+        flex: 0 1 fit-content;
+        width: 100%;
+        height: fit-content;
+        list-style: none;
+        text-align: center;
+
+        li {
+          // display: block;
+          width: 100%;
+          min-height: 30px;
+          height: fit-content;
+          margin: 5px auto 7px auto;
+          font-family: NotoSans;
+          font-weight: 200;
+          font-size: 1rem;
+
+          span {
+            display: inline-block;
+            height: 30px;
+            line-height: 28px;
+            text-align: center;
+            margin: 5px 10px 0 0;
+            background-color: $green;
+            border-radius: 30px;
+            padding: 5px 15px;
+            color: #fff;
+          }
+        }
+      }
+
+      .link {
+        flex: 0 1 10%;
+        margin: 10px auto 0 auto;
+
+        div {
+          display: inline-block;
+          width: fit-content;
+          position: relative;
+
+          &:first-child {
+            margin-right: 30px;
+          }
+
+          a {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #222;
+            transition: all 0.3s ease-in;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 4px;
+              background-color: $green;
+              bottom: 0;
+              left: 0;
+              transform-origin: right;
+              transform: scaleX(0);
+              transition: transform 0.3s ease-in-out;
+            }
+
+            &:hover::before {
+              transform-origin: left;
+              transform: scaleX(1);
+            }
+
+            img {
+              width: 28px;
+              position: relative;
+              top: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+};
+
+
+@include mobile {
+
+  .head {
+    position: absolute;
+    left: 50%;
+    top: 4%;
+    font-size: 2.7rem;
+    letter-spacing: 1px;
+    transform: translate(-50%, 0);
+    font-family: "Shrikhand", cursive;
+    -webkit-text-stroke: 1px $maroon;
+    color: $ivory;
+    z-index: 99;
+  }
+
+.Swiper {
+  background: $othergreen;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/pattern.png);
+  background-repeat: repeat;
+  background-size: 150px 150px;
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    @include item-center;
+  }
+
+  .slide {
+    height: 70vh !important;
+    margin: calc(20vh - 20px) auto;
+    border: $basic_border;
+    background-color: $ivory;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "image" "info";
+
+    &.starbucks {
+      @include projectItem(#006241);
+    }
+    &.baskin {
+      @include projectItem(#0360b0);
+    }
+    &.dangoon {
+      @include projectItem(#ff9500);
+    }
+
+    .image {
+      grid-area: image;
+      border-bottom: $basic_border;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        transform: scale(1.05);
+
+        &:hover {
+          transform: scale(1);
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+
+    .info {
+      width: 100%;
+      grid-area: info;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+
+      .title {
+        flex: 0 1 10%;
+        h2 {
+          font-family: "Shrikhand", cursive;
+          font-size: 2rem;
+          text-align: center;
+          color: $green;
+        }
+      }
+
+      ul {
+        flex: 0 1 fit-content;
+        width: 90%;
+        height: fit-content;
+        list-style: none;
+        text-align: center;
+        margin: 5px auto 0 auto;
+
+        li {
+          // display: block;
+          width: 100%;
+          min-height: 20px;
+          height: fit-content;
+          margin: 3px auto 5px auto;
+          font-family: NotoSans;
+          font-weight: 200;
+          font-size: 0.8rem;
+
+          span {
+            display: inline-block;
+            height: 20px;
+            line-height: 18px;
+            text-align: center;
+            margin: 3px 3px 0 0;
+            background-color: $green;
+            border-radius: 30px;
+            padding: 5px 12px;
+            color: #fff;
+          }
+        }
+      }
+
+      .link {
+        flex: 0 0 3%;
+        margin: 2px auto 8px auto;
+
+        div {
+          display: inline-block;
+          width: fit-content;
+          height: fit-content;
+          position: relative;
+
+          &:first-child {
+            margin-right: 30px;
+          }
+
+          a {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #222;
+            transition: all 0.3s ease-in;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 4px;
+              background-color: $green;
+              bottom: 0;
+              left: 0;
+              transform-origin: right;
+              transform: scaleX(0);
+              transition: transform 0.3s ease-in-out;
+            }
+
+            &:hover::before {
+              transform-origin: left;
+              transform: scaleX(1);
+            }
+
+            img {
+              width: 25px;
+              position: relative;
+              top: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+};
+
+ 

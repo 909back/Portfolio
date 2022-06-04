@@ -18,21 +18,21 @@ const Contact = () => {
     const regex = new RegexHelper();
 
     if (!regex.value("formEmail", "이메일을 입력해주세요.")) {
-      return
+      return;
     }
     if (!regex.email("formEmail", "이메일 형식으로 입력해주세요.")) {
-      return
+      return;
     }
 
 
     if (!regex.value("formName", "이름을 입력해주세요.")) {
-      return
+      return;
     }
     if (!regex.value("formSubject", "제목을 입력해주세요.")) {
-      return
+      return;
     }
     if (!regex.value("formText", "내용을 입력해주세요.")) {
-      return
+      return;
     }
 
 

@@ -1,3 +1,5 @@
+@import 'responsive';
+
 $height: 60px;
 $width: 80px;
 $ivory: #f6f4f2;
@@ -6,8 +8,24 @@ $green : #31422e;
 $othergreen: #4C7A62;
 
 .swiper-pagination-bullet.app{
-    width: $width;
-    height:$height;
+    @include desktop{
+        width: $width;
+        height:$height;
+    }
+
+    @include tablet{
+        width: $width;
+        height:$height;
+    }
+
+
+    @include mobile{
+        width: $width - 30px;
+        height:$height - 20px;
+        line-height:$height - 20px;
+
+        font-size: 0.5rem;
+    }
     text-align: center;
     font-weight: 700;
     font-size: 1rem;

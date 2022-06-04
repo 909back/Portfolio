@@ -5,6 +5,17 @@ import level1 from "../assets/img/Level1.png";
 import level2 from "../assets/img/Level2.png";
 
 const Container = styled.div`
+
+
+  @media (min-width: 335px ) and (max-width: 757px) {
+    width: 25px;
+    height: 25px;
+
+    p {
+      font-size: 0.7rem !important;
+    }
+  }
+
   position: absolute;
   width: 40px;
   height: 40px;
