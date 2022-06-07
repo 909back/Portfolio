@@ -61,7 +61,8 @@
         "skills": [
           "SCSS",
           "React",
-          "Vite"
+          "Vite",
+          "EmailJS"
         ],
         "func": [
           "Infinite Scroll",
