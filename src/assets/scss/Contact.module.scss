@@ -182,7 +182,7 @@ $green: #31422e;
       top: 50%;
       left: 50%;
       width: 60vw;
-      height: 30vh;
+      height: calc(30 * $vh);;
       background-color: $ivory;
       border: 2px solid #222;
       transform: translate(-50%, -50%);
@@ -230,8 +230,8 @@ $green: #31422e;
 
     .title {
       flex: 0 1 7%;
-      font-size: 2.7rem;
-      line-height: 2.7rem;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
       text-align: center;
       color: $green;
       font-family: "Shrikhand", cursive;
@@ -293,7 +293,7 @@ $green: #31422e;
       top: 50%;
       left: 50%;
       width: 70vw;
-      height: 30vh;
+      height: calc(30 * $vh);;
       background-color: $ivory;
       border: 2px solid #222;
       transform: translate(-50%, -50%);

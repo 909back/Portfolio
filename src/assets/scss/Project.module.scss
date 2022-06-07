@@ -257,8 +257,8 @@ $width: calc(30vw + 62px);
   }
 
   .slide {
-    height: 70vh !important;
-    margin: calc(20vh - 20px) auto;
+    height: calc(70 * $vh) !important;
+    margin: calc((20 * $vh) - 20px) auto;
     border: $basic_border;
     background-color: $ivory;
     display: grid;
@@ -429,8 +429,8 @@ $width: calc(30vw + 62px);
   }
 
   .slide {
-    height: 70vh !important;
-    margin: calc(20vh - 20px) auto;
+    height: calc(70 * $vh) !important;
+    margin: calc((20 * $vh) - 20px) auto;
     border: $basic_border;
     background-color: $ivory;
     display: grid;

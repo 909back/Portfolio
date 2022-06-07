@@ -18,38 +18,41 @@ import Skill from "./pages/Skill";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 
-
 const App = () => {
 
-
+  React.useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  });
+  
   return (
     <>
       <Swiper
         direction={"vertical"}
         pagination={{
           clickable: true,
-          renderBullet: function (index, className){
-            let menu = '';
-            switch(index){
-              case 0:   
-              menu = 'ABOUT ME';
-              break;
-              case 1: 
-              menu = 'SKILLS';
-              break;
-              case 2: 
-              menu = 'PROJECT';
-              break;
-              case 3: 
-              menu = 'CONTACT';
-              break;
+          renderBullet: function (index, className) {
+            let menu = "";
+            switch (index) {
+              case 0:
+                menu = "ABOUT ME";
+                break;
+              case 1:
+                menu = "SKILLS";
+                break;
+              case 2:
+                menu = "PROJECT";
+                break;
+              case 3:
+                menu = "CONTACT";
+                break;
             }
             return `<span class="${className} app">${menu}</span>`;
           },
         }}
         speed={600}
         parallax={true}
-        modules={[Pagination, Parallax,Mousewheel]}
+        modules={[Pagination, Parallax, Mousewheel]}
       >
         <SwiperSlide>
           <AboutMe />

@@ -294,10 +294,10 @@ $width: calc(39vw + 62px);
     gap: 10px;
 
     .container {
-      flex-basis: 40vh;
+      flex-basis: calc(40 * $vh);;
       flex-shrink: 0;
       width: 90%;
-      height: 46vh;
+      height: calc(46 * $vh);;
       margin: 0 auto;
       border: $basic_border;
       position: relative;
@@ -347,7 +347,7 @@ $width: calc(39vw + 62px);
   
       .skillList {
         width: 92%;
-        height: calc(40vh - 160px);
+        height: calc((40 * $vh) - 160px);
         scrollbar-width: 5px;
         scroll-behavior: smooth;
         background: $ivory;
@@ -556,10 +556,10 @@ $width: calc(39vw + 62px);
     gap: 10px;
 
     .container {
-      flex-basis: 45vh;
+      flex-basis: calc(45 * $vh);;
       flex-shrink: 0;
       width: 90%;
-      height: 46vh;
+      height: calc(46 * $vh);;
       margin: 0 auto;
       border: $basic_border;
       position: relative;
@@ -609,7 +609,7 @@ $width: calc(39vw + 62px);
   
       .skillList {
         width: 92%;
-        height: calc(45vh - 100px);
+        height: calc((45 * $vh) - 100px);
         scrollbar-width: 5px;
         scroll-behavior: smooth;
         background: $ivory;
@@ -699,8 +699,6 @@ $width: calc(39vw + 62px);
             font-weight: 700;
             line-height: 30px;
             text-align: center;
-            // background-color: $othergreen;
-            // color:$ivory;
           }
   
           &:hover .skillDetail {
