@@ -556,10 +556,10 @@ $width: calc(39vw + 62px);
     gap: 10px;
 
     .container {
-      flex-basis: calc(45 * $vh);;
+      flex-basis: 48%;
       flex-shrink: 0;
       width: 90%;
-      height: calc(46 * $vh);;
+      height: 48%;
       margin: 0 auto;
       border: $basic_border;
       position: relative;
@@ -575,13 +575,13 @@ $width: calc(39vw + 62px);
   
       .skillHeader {
         width: 60%;
-        height: $header_height - 30px;
+        height: 20%;
         border: $basic_border;
         border-radius: 50%;
-        line-height: $header_height - 30px;
         text-align: center;
         margin: 10px auto;
         box-sizing: border-box;
+        @include item-center;
   
         &.frontend {
           background-color: $green;
@@ -609,7 +609,7 @@ $width: calc(39vw + 62px);
   
       .skillList {
         width: 92%;
-        height: calc((45 * $vh) - 100px);
+        height: 70%;
         scrollbar-width: 5px;
         scroll-behavior: smooth;
         background: $ivory;

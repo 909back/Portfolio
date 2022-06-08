@@ -230,8 +230,8 @@ $green: #31422e;
 
     .title {
       flex: 0 1 7%;
-      font-size: 2.5rem;
-      line-height: 2.5rem;
+      font-size: 2.3rem;
+      line-height: 2.3rem;
       text-align: center;
       color: $green;
       font-family: "Shrikhand", cursive;
@@ -240,12 +240,13 @@ $green: #31422e;
     .form {
       width: 100%;
       height: auto;
-      flex: 0 1 70%;
+      flex: 0 1 50%;
 
       div {
         width: 80%;
         height: auto;
         margin: 10px auto;
+
         label {
           display: inline-block;
           font-size: 1.1rem;
@@ -253,12 +254,12 @@ $green: #31422e;
           text-align: left;
           width: 50px;
           margin-right: 10px;
-          line-height: 30px;
+          line-height: 20px;
         }
 
         input {
           display: inline-block;
-          height: 50px;
+          height: 40px;
           width: 100%;
           text-indent: 10px;
           border: 2px solid #222;
@@ -267,7 +268,7 @@ $green: #31422e;
 
       textarea {
         width: calc(80% - 20px);
-        min-height: 200px;
+        min-height: 150px;
         height: fit-content;
         display: block;
         margin: 20px auto;

@@ -11,7 +11,7 @@ import Portfolio from '../assets/img/portfolio.webp';
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
+import "swiper/css";  
 import "swiper/css/navigation";
 
 import "../assets/scss/ProjectMenu.scss"

@@ -405,7 +405,7 @@ $width: calc(30vw + 62px);
     position: absolute;
     left: 50%;
     top: 4%;
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     letter-spacing: 1px;
     transform: translate(-50%, 0);
     font-family: "Shrikhand", cursive;
@@ -429,8 +429,8 @@ $width: calc(30vw + 62px);
   }
 
   .slide {
-    height: calc(70 * $vh) !important;
-    margin: calc((20 * $vh) - 20px) auto;
+    height: 70% !important;
+    margin: calc(20% - 20px) auto;
     border: $basic_border;
     background-color: $ivory;
     display: grid;
