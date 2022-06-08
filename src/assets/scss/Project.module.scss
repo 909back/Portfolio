@@ -55,10 +55,7 @@ $green: #31422e;
 
 $width: calc(30vw + 62px);
 
-
-
 @include desktop {
-
   .head {
     position: absolute;
     left: 50%;
@@ -72,150 +69,151 @@ $width: calc(30vw + 62px);
     z-index: 99;
   }
 
-.Swiper {
-  background: $othergreen;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/pattern.png);
-  background-repeat: repeat;
-  background-size: 150px 150px;
-
-  .wrapper {
+  .Swiper {
+    background: $othergreen;
     width: 100%;
     height: 100%;
-    @include item-center;
-  }
+    background-image: url(../img/pattern.png);
+    background-repeat: repeat;
+    background-size: 150px 150px;
 
-  .slide {
-    width: 100%;
-    height: 60vh !important;
-    @include grid;
-    margin: calc(20vh - 20px) auto;
-    border: $basic_border;
-    background-color: $ivory;
-
-    &.starbucks {
-      @include projectItem(#006241);
-    }
-    &.baskin {
-      @include projectItem(#0360b0);
-    }
-    &.dangoon {
-      @include projectItem(#ff9500);
-    }
-
-    .image {
-      grid-area: image;
-      border-right: $basic_border;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 0;
-        transform: scale(1.05);
-
-        &:hover {
-          transform: scale(1);
-          transition: all 0.2s ease-in-out;
-        }
-      }
-    }
-
-    .info {
+    .wrapper {
+      width: 100%;
       height: 100%;
-      grid-area: info;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      gap: 5px;
+      @include item-center;
+    }
 
-      .title {
-        flex: 0 1 10%;
-        h2 {
-          font-family: "Shrikhand", cursive;
-          font-size: 2.5rem;
-          text-align: center;
-          color: $green;
+    .slide {
+      width: 100%;
+      height: 60vh !important;
+      @include grid;
+      margin: calc(20vh - 20px) auto;
+      border: $basic_border;
+      background-color: $ivory;
+
+      &.starbucks {
+        @include projectItem(#006241);
+      }
+      &.baskin {
+        @include projectItem(#0360b0);
+      }
+      &.dangoon {
+        @include projectItem(#ff9500);
+      }
+
+      .image {
+        grid-area: image;
+        border-right: $basic_border;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 50% 0;
+          transform: scale(1.05);
+
+          &:hover {
+            transform: scale(1);
+            transition: all 0.2s ease-in-out;
+          }
         }
       }
 
-      ul {
-        flex: 0 1 fit-content;
-        width: 100%;
-        height: fit-content;
-        list-style: none;
-        text-align: center;
+      .info {
+        height: 100%;
+        grid-area: info;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        gap: 5px;
 
-        li {
-          // display: block;
-          width: 80%;
-          min-height: 30px;
+        .title {
+          flex: 0 1 10%;
+          h2 {
+            font-family: "Shrikhand", cursive;
+            font-size: 2.5rem;
+            text-align: center;
+            color: $green;
+          }
+        }
+
+        ul {
+          flex: 0 1 fit-content;
+          width: 100%;
           height: fit-content;
-          margin: 5px auto 7px auto;
-          font-family: NotoSans;
-          font-weight: 200;
-          font-size: 1rem;
+          list-style: none;
+          text-align: center;
 
-          span {
-            display: inline-block;
-            height: 30px;
-            line-height: 28px;
-            text-align: center;
-            margin: 5px 10px 0 0;
-            background-color: $green;
-            border-radius: 30px;
-            padding: 5px 15px;
-            color: #fff;
+          li {
+            // display: block;
+            width: 80%;
+            min-height: 30px;
+            height: fit-content;
+            margin: 5px auto 7px auto;
+            font-family: NotoSans;
+            font-weight: 200;
+            font-size: 1rem;
+
+            span {
+              display: inline-block;
+              height: 30px;
+              line-height: 28px;
+              text-align: center;
+              margin: 5px 10px 0 0;
+              background-color: $green;
+              border-radius: 30px;
+              padding: 5px 15px;
+              color: #fff;
+            }
           }
         }
-      }
 
-      .link {
-        flex: 0 1 10%;
-        margin: 10px auto 0 auto;
+        .link {
+          flex: 0 1 10%;
+          margin: 10px auto 0 auto;
 
-        div {
-          display: inline-block;
-          width: fit-content;
-          position: relative;
+          div {
+            display: inline-block;
+            width: fit-content;
+            position: relative;
 
-          &:first-child {
-            margin-right: 30px;
-          }
-
-          a {
-            display: block;
-            text-decoration: none;
-            text-align: center;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #222;
-            transition: all 0.3s ease-in;
-
-            &::before {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 4px;
-              background-color: $green;
-              bottom: 0;
-              left: 0;
-              transform-origin: right;
-              transform: scaleX(0);
-              transition: transform 0.3s ease-in-out;
+            &:first-child {
+              margin-right: 30px;
             }
 
-            &:hover::before {
-              transform-origin: left;
-              transform: scaleX(1);
-            }
+            a {
+              display: block;
+              text-decoration: none;
+              text-align: center;
+              font-size: 1.3rem;
+              font-weight: 700;
+              color: #222;
+              transition: all 0.3s ease-in;
 
-            img {
-              width: 28px;
-              position: relative;
-              top: 6px;
+              &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background-color: $green;
+                bottom: 0;
+                left: 0;
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform 0.3s ease-in-out;
+              }
+
+              &:hover::before {
+                transform-origin: left;
+                transform: scaleX(1);
+              }
+
+              img {
+                width: 28px;
+                position: relative;
+                top: 6px;
+              }
             }
           }
         }
@@ -224,11 +222,7 @@ $width: calc(30vw + 62px);
   }
 }
 
-
-};
-
 @include tablet {
-
   .head {
     position: absolute;
     left: 50%;
@@ -242,151 +236,152 @@ $width: calc(30vw + 62px);
     z-index: 99;
   }
 
-.Swiper {
-  background: $othergreen;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/pattern.png);
-  background-repeat: repeat;
-  background-size: 150px 150px;
-
-  .wrapper {
+  .Swiper {
+    background: $othergreen;
     width: 100%;
-    height: 100%;
-    @include item-center;
-  }
+    height: calc(100 * $vh);
+    background-image: url(../img/pattern.png);
+    background-repeat: repeat;
+    background-size: 150px 150px;
 
-  .slide {
-    height: calc(70 * $vh) !important;
-    margin: calc((20 * $vh) - 20px) auto;
-    border: $basic_border;
-    background-color: $ivory;
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-areas: "image" "info";
-
-    &.starbucks {
-      @include projectItem(#006241);
-    }
-    &.baskin {
-      @include projectItem(#0360b0);
-    }
-    &.dangoon {
-      @include projectItem(#ff9500);
-    }
-
-    .image {
-      grid-area: image;
-      border-bottom: $basic_border;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-        transform: scale(1.05);
-
-        &:hover {
-          transform: scale(1);
-          transition: all 0.2s ease-in-out;
-        }
-      }
-    }
-
-    .info {
+    .wrapper {
       width: 100%;
-      grid-area: info;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      gap: 5px;
+      height: calc(100 * $vh);
+      @include item-center;
+    }
 
-      .title {
-        flex: 0 1 10%;
-        h2 {
-          font-family: "Shrikhand", cursive;
-          font-size: 2.5rem;
-          text-align: center;
-          color: $green;
-        }
+    .slide {
+      height: calc(70 * $vh) !important;
+      margin: calc((20 * $vh) - 20px) auto;
+      border: $basic_border;
+      background-color: $ivory;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "image" "info";
+
+      &.starbucks {
+        @include projectItem(#006241);
+      }
+      &.baskin {
+        @include projectItem(#0360b0);
+      }
+      &.dangoon {
+        @include projectItem(#ff9500);
       }
 
-      ul {
-        flex: 0 1 fit-content;
-        width: 100%;
-        height: fit-content;
-        list-style: none;
-        text-align: center;
+      .image {
+        grid-area: image;
+        border-bottom: $basic_border;
+        overflow: hidden;
 
-        li {
-          // display: block;
+        img {
           width: 100%;
-          min-height: 30px;
-          height: fit-content;
-          margin: 5px auto 7px auto;
-          font-family: NotoSans;
-          font-weight: 200;
-          font-size: 1rem;
+          height: 100%;
+          object-fit: cover;
+          object-position: 50% 50%;
+          transform: scale(1.05);
 
-          span {
-            display: inline-block;
-            height: 30px;
-            line-height: 28px;
-            text-align: center;
-            margin: 5px 10px 0 0;
-            background-color: $green;
-            border-radius: 30px;
-            padding: 5px 15px;
-            color: #fff;
+          &:hover {
+            transform: scale(1);
+            transition: all 0.2s ease-in-out;
           }
         }
       }
 
-      .link {
-        flex: 0 1 10%;
-        margin: 10px auto 0 auto;
+      .info {
+        width: 100%;
+        grid-area: info;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        gap: 5px;
 
-        div {
-          display: inline-block;
-          width: fit-content;
-          position: relative;
-
-          &:first-child {
-            margin-right: 30px;
-          }
-
-          a {
-            display: block;
-            text-decoration: none;
+        .title {
+          flex: 0 1 10%;
+          h2 {
+            font-family: "Shrikhand", cursive;
+            font-size: 2.5rem;
             text-align: center;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #222;
-            transition: all 0.3s ease-in;
+            color: $green;
+          }
+        }
 
-            &::before {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 4px;
+        ul {
+          flex: 0 1 fit-content;
+          width: 100%;
+          height: fit-content;
+          list-style: none;
+          text-align: center;
+
+          li {
+            // display: block;
+            width: 100%;
+            min-height: 30px;
+            height: fit-content;
+            margin: 5px auto 7px auto;
+            font-family: NotoSans;
+            font-weight: 200;
+            font-size: 1rem;
+
+            span {
+              display: inline-block;
+              height: 30px;
+              line-height: 28px;
+              text-align: center;
+              margin: 5px 10px 0 0;
               background-color: $green;
-              bottom: 0;
-              left: 0;
-              transform-origin: right;
-              transform: scaleX(0);
-              transition: transform 0.3s ease-in-out;
+              border-radius: 30px;
+              padding: 5px 15px;
+              color: #fff;
+            }
+          }
+        }
+
+        .link {
+          flex: 0 1 10%;
+          margin: 10px auto 0 auto;
+
+          div {
+            display: inline-block;
+            width: fit-content;
+            position: relative;
+
+            &:first-child {
+              margin-right: 30px;
             }
 
-            &:hover::before {
-              transform-origin: left;
-              transform: scaleX(1);
-            }
+            a {
+              display: block;
+              text-decoration: none;
+              text-align: center;
+              font-size: 1.3rem;
+              font-weight: 700;
+              color: #222;
+              transition: all 0.3s ease-in;
 
-            img {
-              width: 28px;
-              position: relative;
-              top: 6px;
+              &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background-color: $green;
+                bottom: 0;
+                left: 0;
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform 0.3s ease-in-out;
+              }
+
+              &:hover::before {
+                transform-origin: left;
+                transform: scaleX(1);
+              }
+
+              img {
+                width: 28px;
+                position: relative;
+                top: 6px;
+              }
             }
           }
         }
@@ -395,12 +390,7 @@ $width: calc(30vw + 62px);
   }
 }
 
-
-};
-
-
 @include mobile {
-
   .head {
     position: absolute;
     left: 50%;
@@ -414,161 +404,157 @@ $width: calc(30vw + 62px);
     z-index: 99;
   }
 
-.Swiper {
-  background: $othergreen;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/pattern.png);
-  background-repeat: repeat;
-  background-size: 150px 150px;
-
-  .wrapper {
+  .Swiper {
+    background: $othergreen;
     width: 100%;
     height: 100%;
-    @include item-center;
-  }
+    background-image: url(../img/pattern.png);
+    background-repeat: repeat;
+    background-size: 150px 150px;
 
-  .slide {
-    height: 70% !important;
-    margin: calc(20% - 20px) auto;
-    border: $basic_border;
-    background-color: $ivory;
-    display: grid;
-    grid-template-rows: repeat(2,1fr);
-    grid-template-areas: "image" "info";
-
-    &.starbucks {
-      @include projectItem(#006241);
-    }
-    &.baskin {
-      @include projectItem(#0360b0);
-    }
-    &.dangoon {
-      @include projectItem(#ff9500);
-    }
-
-    .image {
-      grid-area: image;
-      border-bottom: $basic_border;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-        transform: scale(1.05);
-
-        &:hover {
-          transform: scale(1);
-          transition: all 0.2s ease-in-out;
-        }
-      }
-    }
-
-    .info {
+    .wrapper {
       width: 100%;
-      grid-area: info;
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
+      height: 100%;
+      @include item-center;
+    }
 
-      .title {
-        flex: 0 1 10%;
-        h2 {
-          font-family: "Shrikhand", cursive;
-          font-size: 2rem;
-          text-align: center;
-          color: $green;
-        }
+    .slide {
+      height: 70% !important;
+      margin: 0px auto;
+      border: $basic_border;
+      background-color: $ivory;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "image" "info";
+
+      &.starbucks {
+        @include projectItem(#006241);
+      }
+      &.baskin {
+        @include projectItem(#0360b0);
+      }
+      &.dangoon {
+        @include projectItem(#ff9500);
       }
 
-      ul {
-        flex: 0 1 fit-content;
-        width: 90%;
-        height: fit-content;
-        list-style: none;
-        text-align: center;
-        margin: 5px auto 0 auto;
+      .image {
+        grid-area: image;
+        border-bottom: $basic_border;
+        overflow: hidden;
 
-        li {
-          // display: block;
+        img {
           width: 100%;
-          min-height: 20px;
-          height: fit-content;
-          margin: 3px auto 5px auto;
-          font-family: NotoSans;
-          font-weight: 200;
-          font-size: 0.8rem;
+          height: 100%;
+          object-fit: cover;
+          object-position: 50% 50%;
+          transform: scale(1.05);
 
-          span {
-            display: inline-block;
-            height: 20px;
-            line-height: 18px;
-            text-align: center;
-            margin: 3px 3px 0 0;
-            background-color: $green;
-            border-radius: 30px;
-            padding: 5px 12px;
-            color: #fff;
+          &:hover {
+            transform: scale(1);
+            transition: all 0.2s ease-in-out;
           }
         }
       }
 
-      .link {
-        flex: 0 0 3%;
-        margin: 2px auto 8px auto;
+      .info {
+        width: 100%;
+        grid-area: info;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
 
-        div {
-          display: inline-block;
-          width: fit-content;
-          height: fit-content;
-          position: relative;
-
-          &:first-child {
-            margin-right: 30px;
-          }
-
-          a {
-            display: block;
-            text-decoration: none;
+        .title {
+          flex: 0 1 10%;
+          h2 {
+            font-family: "Shrikhand", cursive;
+            font-size: 2rem;
             text-align: center;
-            font-size: 1rem;
-            font-weight: 700;
-            color: #222;
-            transition: all 0.3s ease-in;
+            color: $green;
+          }
+        }
 
-            &::before {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 4px;
+        ul {
+          flex: 0 1 fit-content;
+          width: 90%;
+          height: fit-content;
+          list-style: none;
+          text-align: center;
+          margin: 5px auto 0 auto;
+
+          li {
+            // display: block;
+            width: 100%;
+            min-height: 20px;
+            height: fit-content;
+            margin: 3px auto 5px auto;
+            font-family: NotoSans;
+            font-weight: 200;
+            font-size: 0.8rem;
+
+            span {
+              display: inline-block;
+              height: 20px;
+              line-height: 18px;
+              text-align: center;
+              margin: 3px 3px 0 0;
               background-color: $green;
-              bottom: 0;
-              left: 0;
-              transform-origin: right;
-              transform: scaleX(0);
-              transition: transform 0.3s ease-in-out;
+              border-radius: 30px;
+              padding: 5px 12px;
+              color: #fff;
+            }
+          }
+        }
+
+        .link {
+          flex: 0 0 3%;
+          margin: 2px auto 8px auto;
+
+          div {
+            display: inline-block;
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+
+            &:first-child {
+              margin-right: 30px;
             }
 
-            &:hover::before {
-              transform-origin: left;
-              transform: scaleX(1);
-            }
+            a {
+              display: block;
+              text-decoration: none;
+              text-align: center;
+              font-size: 1rem;
+              font-weight: 700;
+              color: #222;
+              transition: all 0.3s ease-in;
 
-            img {
-              width: 25px;
-              position: relative;
-              top: 6px;
+              &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background-color: $green;
+                bottom: 0;
+                left: 0;
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform 0.3s ease-in-out;
+              }
+
+              &:hover::before {
+                transform-origin: left;
+                transform: scaleX(1);
+              }
+
+              img {
+                width: 25px;
+                position: relative;
+                top: 6px;
+              }
             }
           }
         }
       }
     }
   }
-}
-
-
-};
-
- 
+} ;

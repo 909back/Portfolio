@@ -317,7 +317,7 @@ section {
   
     .sparkle2 {
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 30%;
       width: 40px;
       transform: perspective(100px) translateZ(20px);
@@ -549,12 +549,12 @@ section {
       position: absolute;
       top: 45%;
       left: 30%;
-      width: 30px;
+      width: 30px;  
       transform: perspective(100px) translateZ(20px);
       @include animation;
     }
   
-    $header_height: calc(12 * $vh);;
+    $header_height: 100px;
 
     .header {
       width: 100%;
@@ -608,12 +608,12 @@ section {
   
           p:nth-child(1){
             position: relative;
-            top:10px;
+            top:5px;
           }
   
           p:nth-child(2){
             position: relative;
-            top:-10px;
+            top:-5px;
           }
   
         }
@@ -640,7 +640,7 @@ section {
   
     .profile {
       width: 100%;
-      height: calc((75 * $vh) - 40px);
+      height: calc(75% - 40px);
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
@@ -649,7 +649,7 @@ section {
       .profileImg {
         flex: 0 0 50%;
         width: 40%;
-        height: calc(40vh);;
+        height: 50%;
         border-radius: 50%;
         border: 2px solid #222;
         overflow: hidden;
@@ -663,9 +663,9 @@ section {
         }
       }
       .introduce {
-        flex: 0 0 43vh;
+        flex: 0 0 50%;
         width: 100%;
-        height: calc(43vh);;
+        height: 50%;
         border-top: $basic_border;
         line-height: 1.5rem;
         font-size: 0.7rem;
@@ -675,7 +675,7 @@ section {
           width: 150px;
           line-height: 1.8rem;
           letter-spacing: 1px;
-          margin: 10px auto;
+          margin: 20px auto;
           text-align: center;
         }
   
@@ -708,7 +708,7 @@ section {
         .sns {
           width: 100%;
           height: $mobile_sns_height;
-          margin-top: 5px;
+          margin-top: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
