@@ -55,26 +55,15 @@
       "domain": "https://dangoon.duckdns.org"
     },
     {
-        "name": "Portfolio",
-        "period": "2021.05 ~ 2022.06",
-        "description": "개인 포트폴리오 사이트",
-        "skills": [
-          "SCSS",
-          "React",
-          "Vite",
-          "EmailJS"
-        ],
-        "func": [
-          "Infinite Scroll",
-          "Redux-toolkit",
-          "중고거래",
-          "좋아요",
-          "댓글"
-        ],
-        "role": "Frontend",
-        "roleDesc": "UX/UI 및 프론트엔드 개발 및 배포 담당하였습니다.",
-        "github": "https://github.com/909back/Portfolio",
-        "domain": "https://www.909back.site"
-      }
+      "name": "Portfolio",
+      "period": "2021.05 ~ 2022.06",
+      "description": "개인 포트폴리오 사이트",
+      "skills": ["SCSS", "React", "Vite", "EmailJS"],
+      "func": [],
+      "role": "Frontend",
+      "roleDesc": "UX/UI 및 프론트엔드 개발 및 배포 담당하였습니다.",
+      "github": "https://github.com/909back/Portfolio",
+      "domain": "https://www.909back.site"
+    }
   ]
 }
