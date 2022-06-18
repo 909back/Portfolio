@@ -37,7 +37,7 @@ $width: calc(39vw + 62px);
       border-right: $basic_border;
       position: relative;
   
-      &:nth-child(2) {
+      &:nth-child(1) {
         background-color: $green;
   
         .title {
@@ -56,12 +56,12 @@ $width: calc(39vw + 62px);
         margin: 20px auto;
         box-sizing: border-box;
   
-        &.frontend {
+        &.backend {
           background-color: $green;
           color: $yellow;
         }
   
-        &.backend {
+        &.frontend {
           color: $yellow;
           background-color: $ivory;
   
@@ -156,10 +156,10 @@ $width: calc(39vw + 62px);
             }
           }
   
-          &.graphql {
+          &.type {
             grid-area: four;
             svg {
-              fill: #e10098;
+              fill: #3178C6;
             }
           }
   
@@ -417,11 +417,11 @@ $width: calc(39vw + 62px);
             }
           }
   
-          &.graphql {
+          &.type {
             grid-area: four;
             border-right:0;
             svg {
-              fill: #e10098;
+              fill: #3178C6;
             }
           }
   
@@ -683,11 +683,11 @@ $width: calc(39vw + 62px);
             }
           }
   
-          &.graphql {
+          &.type {
             grid-area: four;
             border-right:0;
             svg {
-              fill: #e10098;
+              fill: #3178C6;
             }
           }
   

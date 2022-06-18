@@ -3,7 +3,7 @@
     {
       "name": "Starbucks",
       "period": "2021.11",
-      "description": "스타벅스 메인 페이지 클론코딩",
+      "description": "스타벅스 메인 페이지 클론코딩 사이트입니다.",
       "skills": ["HTML5", "CSS3", "JavaScript"],
       "func": [
         "비동기 처리",
@@ -21,7 +21,7 @@
       "period": "2021.11",
       "description": "베스킨라빈스 메인 페이지 클론코딩",
       "skills": ["HTML5", "CSS3", "JavaScript"],
-      "func": ["carousel", "시멘틱 웹 구조", "드롭다운 메뉴", "시멘틱 웹 구조"],
+      "func": ["carousel", "시멘틱 웹 구조", "시멘틱 웹 구조"],
       "role": "Frontend",
       "roleDesc": "UX/UI 및 프론트엔드 개발 및 배포 담당하였습니다.",
       "github": "https://github.com/909back/cloneCoding-project/tree/main/baskin_robbins",
@@ -30,20 +30,17 @@
     {
       "name": "Dangoon Market",
       "period": "2021.01 ~ 2022.05",
-      "description": "당근마켓을 벤치마킹 서비스로 중고거래 및 회원 간의 커뮤니케이션 기능을 제공합니다.",
+      "description": "간편한 거래방식으로 중고 판매 및 커뮤니티 서비스를 제공합니다. 프론트엔드 개발과 UI/UX를 담당하였습니다.",
       "skills": [
-        "HTML5",
         "CSS3 & Sass",
-        "JavaScript",
         "React",
         "Redux",
         "Node.js",
         "MySQL",
-        "SSL",
+        "Nginx",
         "AWS"
       ],
       "func": [
-        "Infinite Scroll",
         "중고거래",
         "좋아요",
         "댓글",
@@ -57,9 +54,20 @@
     {
       "name": "Portfolio",
       "period": "2021.05 ~ 2022.06",
-      "description": "개인 포트폴리오 사이트",
+      "description": "개인 포트폴리오 사이트 입니다.",
       "skills": ["SCSS", "React", "Vite", "EmailJS"],
-      "func": [],
+      "func": ["웹메일 발송"],
+      "role": "Frontend",
+      "roleDesc": "UX/UI 및 프론트엔드 개발 및 배포 담당하였습니다.",
+      "github": "https://github.com/909back/Portfolio",
+      "domain": "https://www.909back.site"
+    },
+    {
+      "name": "Miary",
+      "period": "2021.06 ~ 진행중",
+      "description": "개발중인 블로그 서비스입니다.",
+      "skills": ["Node.js", "React"],
+      "func": ["웹메일 발송"],
       "role": "Frontend",
       "roleDesc": "UX/UI 및 프론트엔드 개발 및 배포 담당하였습니다.",
       "github": "https://github.com/909back/Portfolio",
