@@ -65,9 +65,9 @@
     {
       "name": "Miary",
       "period": "2021.06 ~ 진행중",
-      "description": "개발중인 블로그 서비스입니다.",
+      "description": "백엔드 ㅂ",
       "skills": ["Node.js", "React"],
-      "func": ["웹메일 발송"],
+      "func": ["블로그"],
       "role": "Frontend",
       "roleDesc": "UX/UI 및 프론트엔드 개발 및 배포 담당하였습니다.",
       "github": "https://github.com/909back/Portfolio",
