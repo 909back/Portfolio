@@ -45,7 +45,7 @@ const Project = () => {
             <ProjectItem Image={Portfolio} data={config.project_info[3]} />
           </SwiperSlide>
           <SwiperSlide>
-            <ProjectItem Image={Miary} data={config.project_info[4]} />
+            <ProjectItem Image={Miary} data={config.project_info[4]} styleName={style.miary} />
           </SwiperSlide>
         </Swiper>
       </section>
