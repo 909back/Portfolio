@@ -6,7 +6,7 @@ import Dangoon from "../assets/img/dangoon2.webp";
 import Starbucks from '../assets/img/starbucks.webp';
 import Baskin from '../assets/img/baskin.webp';
 import Portfolio from '../assets/img/portfolio.webp';
-import Miary from '../assets/img/miary.png';
+import Miary from '../assets/img/Miary.png';
 
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
