@@ -54,7 +54,7 @@
     {
       "name": "Portfolio",
       "period": "2021.05 ~ 2022.06",
-      "description": "개인 포트폴리오 사이트 입니다.",
+      "description": "빠른 속도가 장점인 Vite를 이용하여 만든 개인 포트폴리오 사이트 입니다.",
       "skills": ["SCSS", "React", "Vite", "EmailJS"],
       "func": ["웹메일 발송"],
       "role": "Frontend",
