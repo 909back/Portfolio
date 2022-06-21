@@ -65,13 +65,13 @@
     {
       "name": "Miary",
       "period": "2021.06 ~ 진행중",
-      "description": "백엔드 ㅂ",
+      "description": "백엔드 담당",
       "skills": ["Node.js", "React"],
-      "func": ["블로그"],
+      "func": ["블로그","TDD 개발","Mocha","SuperTest","Jira"],
       "role": "Frontend",
       "roleDesc": "UX/UI 및 프론트엔드 개발 및 배포 담당하였습니다.",
-      "github": "https://github.com/909back/Portfolio",
-      "domain": "https://www.909back.site"
+      "github": "https://github.com/SuHuenPyo/blog",
+      "domain": "#"
     }
   ]
 }
