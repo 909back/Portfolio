@@ -9,7 +9,7 @@ import RegexHelper from "../util/Regex";
 const Contact = () => {
   const Form = React.useRef();
   const [open, setOpen] = React.useState(false);
-  const [result, setResult] = React.useState(false);
+  const [result, setResult] = React.useState(true);
   const [name, setName] = React.useState("");
 
   const sendEmail = (e) => {
@@ -46,11 +46,11 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          setResult(true);
+          return setResult(true);
         },
         (error) => {
           console.log(error);
-          setResult(false);
+          return setResult(false);
         }
       )
       .finally(setOpen(true));
